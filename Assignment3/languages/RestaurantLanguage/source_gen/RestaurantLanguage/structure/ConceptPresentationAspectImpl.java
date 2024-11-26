@@ -16,6 +16,7 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
   private ConceptPresentation props_DiningRoom;
   private ConceptPresentation props_EmployeRelation;
   private ConceptPresentation props_Employee;
+  private ConceptPresentation props_IRestaurantRelation;
   private ConceptPresentation props_Kitchen;
   private ConceptPresentation props_Menu;
   private ConceptPresentation props_Owner;
@@ -80,6 +81,12 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
           props_Employee = cpb.create();
         }
         return props_Employee;
+      case LanguageConceptSwitch.IRestaurantRelation:
+        if (props_IRestaurantRelation == null) {
+          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          props_IRestaurantRelation = cpb.create();
+        }
+        return props_IRestaurantRelation;
       case LanguageConceptSwitch.Kitchen:
         if (props_Kitchen == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();

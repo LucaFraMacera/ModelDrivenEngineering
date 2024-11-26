@@ -509,6 +509,9 @@
       <property role="20lbJX" value="fLJekj4/_1" />
       <ref role="20lvS9" node="22wu4jVVMLz" resolve="Owner" />
     </node>
+    <node concept="PrWs8" id="5avFOxqqU0g" role="PzmwI">
+      <ref role="PrY4T" node="5avFOxqqSTS" resolve="IRestaurantRelation" />
+    </node>
   </node>
   <node concept="1TIwiD" id="7zcgsOhemKo">
     <property role="EcuMT" value="8704404528813403160" />
@@ -521,6 +524,14 @@
       <property role="20lbJX" value="fLJekj4/_1" />
       <ref role="20lvS9" node="22wu4jVVMLr" resolve="Employee" />
     </node>
+    <node concept="PrWs8" id="5avFOxqqU0f" role="PzmwI">
+      <ref role="PrY4T" node="5avFOxqqSTS" resolve="IRestaurantRelation" />
+    </node>
+  </node>
+  <node concept="PlHQZ" id="5avFOxqqSTS">
+    <property role="EcuMT" value="5953669957696589432" />
+    <property role="3GE5qa" value="Relations" />
+    <property role="TrG5h" value="IRestaurantRelation" />
   </node>
 </model>
 

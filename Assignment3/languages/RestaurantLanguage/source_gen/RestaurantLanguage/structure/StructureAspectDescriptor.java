@@ -25,6 +25,7 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
   /*package*/ final ConceptDescriptor myConceptDiningRoom = createDescriptorForDiningRoom();
   /*package*/ final ConceptDescriptor myConceptEmployeRelation = createDescriptorForEmployeRelation();
   /*package*/ final ConceptDescriptor myConceptEmployee = createDescriptorForEmployee();
+  /*package*/ final ConceptDescriptor myConceptIRestaurantRelation = createDescriptorForIRestaurantRelation();
   /*package*/ final ConceptDescriptor myConceptKitchen = createDescriptorForKitchen();
   /*package*/ final ConceptDescriptor myConceptMenu = createDescriptorForMenu();
   /*package*/ final ConceptDescriptor myConceptOwner = createDescriptorForOwner();
@@ -57,7 +58,7 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
 
   @Override
   public Collection<ConceptDescriptor> getDescriptors() {
-    return Arrays.asList(myConceptBathroom, myConceptCity, myConceptCourse, myConceptDiagram, myConceptDiningRoom, myConceptEmployeRelation, myConceptEmployee, myConceptKitchen, myConceptMenu, myConceptOwner, myConceptOwnerRelation, myConceptPerson, myConceptRegion, myConceptRestaurant, myConceptRestaurantArea, myConceptTable);
+    return Arrays.asList(myConceptBathroom, myConceptCity, myConceptCourse, myConceptDiagram, myConceptDiningRoom, myConceptEmployeRelation, myConceptEmployee, myConceptIRestaurantRelation, myConceptKitchen, myConceptMenu, myConceptOwner, myConceptOwnerRelation, myConceptPerson, myConceptRegion, myConceptRestaurant, myConceptRestaurantArea, myConceptTable);
   }
 
   @Override
@@ -78,6 +79,8 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
         return myConceptEmployeRelation;
       case LanguageConceptSwitch.Employee:
         return myConceptEmployee;
+      case LanguageConceptSwitch.IRestaurantRelation:
+        return myConceptIRestaurantRelation;
       case LanguageConceptSwitch.Kitchen:
         return myConceptKitchen;
       case LanguageConceptSwitch.Menu:
@@ -163,6 +166,7 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
   private static ConceptDescriptor createDescriptorForEmployeRelation() {
     ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("RestaurantLanguage", "EmployeRelation", 0xb104fc7d0eb94ddcL, 0x828f1118413b5a6bL, 0x78cc41cd11396c18L);
     b.class_(false, false, false);
+    b.parent(0xb104fc7d0eb94ddcL, 0x828f1118413b5a6bL, 0x529faf485a6b8e78L);
     b.origin("r:ed2e1c8b-f3ce-4973-8d88-0d8c7147e936(RestaurantLanguage.structure)/8704404528813403160");
     b.version(3);
     b.associate("employe", 0x78cc41cd11396c19L).target(0xb104fc7d0eb94ddcL, 0x828f1118413b5a6bL, 0x20a07844fbef2c5bL).optional(false).origin("8704404528813403161").done();
@@ -178,6 +182,13 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
     b.property("contractSignDate", 0x20a07844fbef2c5eL).type(MetaIdFactory.dataTypeId(0xb104fc7d0eb94ddcL, 0x828f1118413b5a6bL, 0x20a07844fbef2c3aL)).origin("2351011243167263838").done();
     b.property("salary", 0x20a07844fbef2c5fL).type(MetaIdFactory.dataTypeId(0xb104fc7d0eb94ddcL, 0x828f1118413b5a6bL, 0x20a07844fbef2c3cL)).origin("2351011243167263839").done();
     b.property("role", 0x20a07844fbef2c60L).type(MetaIdFactory.dataTypeId(0xb104fc7d0eb94ddcL, 0x828f1118413b5a6bL, 0x20a07844fbef2c61L)).origin("2351011243167263840").done();
+    return b.create();
+  }
+  private static ConceptDescriptor createDescriptorForIRestaurantRelation() {
+    ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("RestaurantLanguage", "IRestaurantRelation", 0xb104fc7d0eb94ddcL, 0x828f1118413b5a6bL, 0x529faf485a6b8e78L);
+    b.interface_();
+    b.origin("r:ed2e1c8b-f3ce-4973-8d88-0d8c7147e936(RestaurantLanguage.structure)/5953669957696589432");
+    b.version(3);
     return b.create();
   }
   private static ConceptDescriptor createDescriptorForKitchen() {
@@ -210,6 +221,7 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
   private static ConceptDescriptor createDescriptorForOwnerRelation() {
     ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("RestaurantLanguage", "OwnerRelation", 0xb104fc7d0eb94ddcL, 0x828f1118413b5a6bL, 0x78cc41cd11396c16L);
     b.class_(false, false, false);
+    b.parent(0xb104fc7d0eb94ddcL, 0x828f1118413b5a6bL, 0x529faf485a6b8e78L);
     b.origin("r:ed2e1c8b-f3ce-4973-8d88-0d8c7147e936(RestaurantLanguage.structure)/8704404528813403158");
     b.version(3);
     b.associate("owner", 0x78cc41cd11396c17L).target(0xb104fc7d0eb94ddcL, 0x828f1118413b5a6bL, 0x20a07844fbef2c63L).optional(false).origin("8704404528813403159").done();

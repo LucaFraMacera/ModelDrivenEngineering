@@ -134,5 +134,73 @@
       </node>
     </node>
   </node>
+  <node concept="1M2fIO" id="5avFOxqqSTT">
+    <ref role="1M2myG" to="7682:5avFOxqqSTS" resolve="IRestaurantRelation" />
+    <node concept="9S07l" id="5avFOxqqSTU" role="9Vyp8">
+      <node concept="3clFbS" id="5avFOxqqSTV" role="2VODD2">
+        <node concept="3cpWs6" id="5avFOxqqTPH" role="3cqZAp">
+          <node concept="2OqwBi" id="5avFOxqqTvh" role="3cqZAk">
+            <node concept="nLn13" id="5avFOxqqT7H" role="2Oq$k0" />
+            <node concept="1mIQ4w" id="5avFOxqqTJt" role="2OqNvi">
+              <node concept="chp4Y" id="5avFOxqqTLX" role="cj9EA">
+                <ref role="cht4Q" to="7682:22wu4jVVOau" resolve="Restaurant" />
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+  </node>
+  <node concept="1M2fIO" id="5avFOxqqYt5">
+    <ref role="1M2myG" to="7682:22wu4jVVMLI" resolve="RestaurantArea" />
+    <node concept="9S07l" id="5avFOxqqYt6" role="9Vyp8">
+      <node concept="3clFbS" id="5avFOxqqYt7" role="2VODD2">
+        <node concept="3cpWs6" id="5avFOxqqYFh" role="3cqZAp">
+          <node concept="2OqwBi" id="5avFOxqqYPt" role="3cqZAk">
+            <node concept="nLn13" id="5avFOxqqYGl" role="2Oq$k0" />
+            <node concept="1mIQ4w" id="5avFOxqqZ8y" role="2OqNvi">
+              <node concept="chp4Y" id="5avFOxqqZb2" role="cj9EA">
+                <ref role="cht4Q" to="7682:22wu4jVVOau" resolve="Restaurant" />
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+  </node>
+  <node concept="1M2fIO" id="5avFOxqqZeK">
+    <ref role="1M2myG" to="7682:22wu4jVVMLN" resolve="Table" />
+    <node concept="9S07l" id="5avFOxqqZeL" role="9Vyp8">
+      <node concept="3clFbS" id="5avFOxqqZeM" role="2VODD2">
+        <node concept="3cpWs6" id="5avFOxqqZt2" role="3cqZAp">
+          <node concept="2OqwBi" id="5avFOxqqZNU" role="3cqZAk">
+            <node concept="nLn13" id="5avFOxqqZtI" role="2Oq$k0" />
+            <node concept="1mIQ4w" id="5avFOxqr06Z" role="2OqNvi">
+              <node concept="chp4Y" id="5avFOxqr09v" role="cj9EA">
+                <ref role="cht4Q" to="7682:22wu4jVVMLX" resolve="DiningRoom" />
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+  </node>
+  <node concept="1M2fIO" id="5avFOxquZ6S">
+    <ref role="1M2myG" to="7682:22wu4jVVML4" resolve="Course" />
+    <node concept="9S07l" id="5avFOxquZ6T" role="9Vyp8">
+      <node concept="3clFbS" id="5avFOxquZ6U" role="2VODD2">
+        <node concept="3cpWs6" id="5avFOxquZUZ" role="3cqZAp">
+          <node concept="2OqwBi" id="5avFOxquZvG" role="3cqZAk">
+            <node concept="nLn13" id="5avFOxquZkP" role="2Oq$k0" />
+            <node concept="1mIQ4w" id="5avFOxquZOJ" role="2OqNvi">
+              <node concept="chp4Y" id="5avFOxquZRf" role="cj9EA">
+                <ref role="cht4Q" to="7682:22wu4jVVMLR" resolve="Menu" />
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+  </node>
 </model>
 

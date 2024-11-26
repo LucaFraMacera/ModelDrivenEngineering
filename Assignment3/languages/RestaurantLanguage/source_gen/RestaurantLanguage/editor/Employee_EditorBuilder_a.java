@@ -216,7 +216,7 @@ import org.jetbrains.mps.openapi.language.SConcept;
     }
   }
   private EditorCell createConstant_4() {
-    EditorCell_Constant editorCell = new EditorCell_Constant(getEditorContext(), myNode, "contractDignDate");
+    EditorCell_Constant editorCell = new EditorCell_Constant(getEditorContext(), myNode, "contractSignDate");
     editorCell.setCellId("Constant_laamfj_d4a");
     Style style = new StyleImpl();
     style.set(StyleAttributes.TEXT_COLOR, getStyleRegistry().getSimpleColor(MPSColors.LIGHT_BLUE));

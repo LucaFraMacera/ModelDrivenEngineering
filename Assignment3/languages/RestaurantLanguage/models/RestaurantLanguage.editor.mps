@@ -148,7 +148,7 @@
           </node>
         </node>
         <node concept="3F0ifn" id="7zcgsOhen2d" role="3EZMnx">
-          <property role="3F0ifm" value="contractDignDate" />
+          <property role="3F0ifm" value="contractSignDate" />
           <node concept="VechU" id="5avFOxqkuDo" role="3F10Kt">
             <property role="Vb096" value="hGRnIZc/lightBlue" />
           </node>

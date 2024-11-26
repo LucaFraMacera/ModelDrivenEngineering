@@ -16,9 +16,9 @@ import jetbrains.mps.smodel.SNodePointer;
 import org.jetbrains.mps.openapi.language.SConcept;
 import jetbrains.mps.smodel.adapter.structure.MetaAdapterFactory;
 
-public class Table_Constraints extends BaseConstraintsDescriptor {
-  public Table_Constraints() {
-    super(CONCEPTS.Table$B3);
+public class Course_Constraints extends BaseConstraintsDescriptor {
+  public Course_Constraints() {
+    super(CONCEPTS.Course$BA);
   }
 
   @Override
@@ -37,12 +37,12 @@ public class Table_Constraints extends BaseConstraintsDescriptor {
     };
   }
   private static boolean staticCanBeAChild(SNode node, SNode parentNode, SAbstractConcept childConcept, SContainmentLink link) {
-    return SNodeOperations.isInstanceOf(parentNode, CONCEPTS.DiningRoom$Q4);
+    return SNodeOperations.isInstanceOf(parentNode, CONCEPTS.Menu$Na);
   }
-  private static final SNodePointer canBeChildBreakingPoint = new SNodePointer("r:6142c5f6-2907-48aa-8a44-fb0a42c9cd30(RestaurantLanguage.constraints)", "5953669957696615345");
+  private static final SNodePointer canBeChildBreakingPoint = new SNodePointer("r:6142c5f6-2907-48aa-8a44-fb0a42c9cd30(RestaurantLanguage.constraints)", "5953669957697663417");
 
   private static final class CONCEPTS {
-    /*package*/ static final SConcept Table$B3 = MetaAdapterFactory.getConcept(0xb104fc7d0eb94ddcL, 0x828f1118413b5a6bL, 0x20a07844fbef2c73L, "RestaurantLanguage.structure.Table");
-    /*package*/ static final SConcept DiningRoom$Q4 = MetaAdapterFactory.getConcept(0xb104fc7d0eb94ddcL, 0x828f1118413b5a6bL, 0x20a07844fbef2c7dL, "RestaurantLanguage.structure.DiningRoom");
+    /*package*/ static final SConcept Course$BA = MetaAdapterFactory.getConcept(0xb104fc7d0eb94ddcL, 0x828f1118413b5a6bL, 0x20a07844fbef2c44L, "RestaurantLanguage.structure.Course");
+    /*package*/ static final SConcept Menu$Na = MetaAdapterFactory.getConcept(0xb104fc7d0eb94ddcL, 0x828f1118413b5a6bL, 0x20a07844fbef2c77L, "RestaurantLanguage.structure.Menu");
   }
 }

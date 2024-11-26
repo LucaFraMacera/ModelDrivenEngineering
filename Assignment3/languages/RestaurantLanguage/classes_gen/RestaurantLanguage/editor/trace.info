@@ -22,12 +22,12 @@
     <file name="EditorAspectDescriptorImpl.java">
       <unit at="16,0,80,0" name="RestaurantLanguage.editor.EditorAspectDescriptorImpl" />
     </file>
-    <file name="EmployeRelation_SubstituteMenu.java">
-      <unit at="61,0,64,0" name="RestaurantLanguage.editor.EmployeRelation_SubstituteMenu$CONCEPTS" />
-      <unit at="65,0,68,0" name="RestaurantLanguage.editor.EmployeRelation_SubstituteMenu$LINKS" />
-      <unit at="38,0,45,0" name="RestaurantLanguage.editor.EmployeRelation_SubstituteMenu$SMP_ReferenceScope_lrvxrm_a" />
-      <unit at="45,0,60,0" name="RestaurantLanguage.editor.EmployeRelation_SubstituteMenu$SMP_Subconcepts_lrvxrm_b" />
-      <unit at="25,0,69,0" name="RestaurantLanguage.editor.EmployeRelation_SubstituteMenu" />
+    <file name="EmployeeRelation_SubstituteMenu.java">
+      <unit at="61,0,64,0" name="RestaurantLanguage.editor.EmployeeRelation_SubstituteMenu$CONCEPTS" />
+      <unit at="65,0,68,0" name="RestaurantLanguage.editor.EmployeeRelation_SubstituteMenu$LINKS" />
+      <unit at="38,0,45,0" name="RestaurantLanguage.editor.EmployeeRelation_SubstituteMenu$SMP_ReferenceScope_hhcm1j_a" />
+      <unit at="45,0,60,0" name="RestaurantLanguage.editor.EmployeeRelation_SubstituteMenu$SMP_Subconcepts_hhcm1j_b" />
+      <unit at="25,0,69,0" name="RestaurantLanguage.editor.EmployeeRelation_SubstituteMenu" />
     </file>
     <file name="Employee_SubstituteMenu.java">
       <unit at="61,0,64,0" name="RestaurantLanguage.editor.Employee_SubstituteMenu$CONCEPTS" />
@@ -368,18 +368,18 @@
     </file>
   </root>
   <root nodeRef="r:eb9c75be-da35-4573-8ac4-4a633a652563(RestaurantLanguage.editor)/5953669957691778273">
-    <file name="EmployeRelation_Editor.java">
-      <node id="5953669957691778273" at="11,79,12,81" concept="6" />
+    <file name="EmployeeRelation_Editor.java">
+      <node id="5953669957691778273" at="11,79,12,82" concept="6" />
       <node id="5953669957691778273" at="11,0,14,0" concept="4" trace="createEditorCell#(Ljetbrains/mps/openapi/editor/EditorContext;Lorg/jetbrains/mps/openapi/model/SNode;)Ljetbrains/mps/openapi/editor/cells/EditorCell;" />
-      <scope id="5953669957691778273" at="11,79,12,81" />
+      <scope id="5953669957691778273" at="11,79,12,82" />
       <scope id="5953669957691778273" at="11,0,14,0">
         <var name="editorContext" id="5953669957691778273" />
         <var name="node" id="5953669957691778273" />
       </scope>
-      <unit id="5953669957691778273" at="10,0,15,0" name="RestaurantLanguage.editor.EmployeRelation_Editor" />
+      <unit id="5953669957691778273" at="10,0,15,0" name="RestaurantLanguage.editor.EmployeeRelation_Editor" />
     </file>
-    <file name="EmployeRelation_EditorBuilder_a.java">
-      <node id="5953669957691778273" at="46,95,47,19" concept="9" />
+    <file name="EmployeeRelation_EditorBuilder_a.java">
+      <node id="5953669957691778273" at="46,96,47,19" concept="9" />
       <node id="5953669957691778273" at="47,19,48,18" concept="1" />
       <node id="5953669957691778273" at="53,26,54,18" concept="6" />
       <node id="5953669957691778273" at="57,39,58,32" concept="6" />
@@ -516,7 +516,7 @@
       <node id="5953669957691778273" at="57,0,60,0" concept="4" trace="createCell#()Ljetbrains/mps/openapi/editor/cells/EditorCell;" />
       <node id="5953669957693332238" at="137,0,140,0" concept="4" trace="createCell#()Ljetbrains/mps/openapi/editor/cells/EditorCell;" />
       <node id="5953669957693332241" at="218,0,221,0" concept="4" trace="createCell#()Ljetbrains/mps/openapi/editor/cells/EditorCell;" />
-      <node id="5953669957691778273" at="46,0,50,0" concept="0" trace="EmployeRelation_EditorBuilder_a#(Ljetbrains/mps/openapi/editor/EditorContext;Lorg/jetbrains/mps/openapi/model/SNode;)V" />
+      <node id="5953669957691778273" at="46,0,50,0" concept="0" trace="EmployeeRelation_EditorBuilder_a#(Ljetbrains/mps/openapi/editor/EditorContext;Lorg/jetbrains/mps/openapi/model/SNode;)V" />
       <node id="5953669957691778273" at="112,0,116,5" concept="3" />
       <node id="5953669957691778273" at="193,0,197,5" concept="3" />
       <node id="5953669957691778273" at="51,0,56,0" concept="4" trace="getNode#()Lorg/jetbrains/mps/openapi/model/SNode;" />
@@ -552,7 +552,7 @@
       <scope id="5953669957693332241" at="218,41,219,32" />
       <scope id="5953669957693332241" at="224,28,225,20" />
       <scope id="5953669957693332242" at="248,17,249,42" />
-      <scope id="5953669957691778273" at="46,95,48,18" />
+      <scope id="5953669957691778273" at="46,96,48,18" />
       <scope id="5953669957691778273" at="113,40,115,46" />
       <scope id="5953669957691778273" at="120,73,122,145">
         <var name="manager" id="5953669957691778273" />
@@ -666,14 +666,14 @@
       </scope>
       <scope id="5953669957691778273" at="91,0,126,0" />
       <scope id="5953669957691778273" at="172,0,207,0" />
-      <unit id="5953669957691778273" at="264,0,267,0" name="RestaurantLanguage.editor.EmployeRelation_EditorBuilder_a$LINKS" />
-      <unit id="5953669957691778273" at="268,0,272,0" name="RestaurantLanguage.editor.EmployeRelation_EditorBuilder_a$CONCEPTS" />
-      <unit id="5953669957691778273" at="273,0,277,0" name="RestaurantLanguage.editor.EmployeRelation_EditorBuilder_a$PROPS" />
-      <unit id="5953669957691778273" at="93,42,108,5" name="RestaurantLanguage.editor.EmployeRelation_EditorBuilder_a$1" />
-      <unit id="5953669957691778273" at="174,42,189,5" name="RestaurantLanguage.editor.EmployeRelation_EditorBuilder_a$2" />
-      <unit id="5953669957693332238" at="126,0,172,0" name="RestaurantLanguage.editor.EmployeRelation_EditorBuilder_a$Inline_Builder0" />
-      <unit id="5953669957693332241" at="207,0,253,0" name="RestaurantLanguage.editor.EmployeRelation_EditorBuilder_a$Inline_Builder1" />
-      <unit id="5953669957691778273" at="42,0,278,0" name="RestaurantLanguage.editor.EmployeRelation_EditorBuilder_a" />
+      <unit id="5953669957691778273" at="264,0,267,0" name="RestaurantLanguage.editor.EmployeeRelation_EditorBuilder_a$LINKS" />
+      <unit id="5953669957691778273" at="268,0,272,0" name="RestaurantLanguage.editor.EmployeeRelation_EditorBuilder_a$CONCEPTS" />
+      <unit id="5953669957691778273" at="273,0,277,0" name="RestaurantLanguage.editor.EmployeeRelation_EditorBuilder_a$PROPS" />
+      <unit id="5953669957691778273" at="93,42,108,5" name="RestaurantLanguage.editor.EmployeeRelation_EditorBuilder_a$1" />
+      <unit id="5953669957691778273" at="174,42,189,5" name="RestaurantLanguage.editor.EmployeeRelation_EditorBuilder_a$2" />
+      <unit id="5953669957693332238" at="126,0,172,0" name="RestaurantLanguage.editor.EmployeeRelation_EditorBuilder_a$Inline_Builder0" />
+      <unit id="5953669957693332241" at="207,0,253,0" name="RestaurantLanguage.editor.EmployeeRelation_EditorBuilder_a$Inline_Builder1" />
+      <unit id="5953669957691778273" at="42,0,278,0" name="RestaurantLanguage.editor.EmployeeRelation_EditorBuilder_a" />
     </file>
   </root>
   <root nodeRef="r:eb9c75be-da35-4573-8ac4-4a633a652563(RestaurantLanguage.editor)/8704404528813122419">
@@ -3820,7 +3820,7 @@
       <node id="8704404528813122648" at="747,28,748,25" concept="1" />
       <node id="8704404528813122648" at="752,28,753,20" concept="6" />
       <node id="8704404528813122648" at="755,40,756,33" concept="6" />
-      <node id="8704404528813122648" at="758,48,759,41" concept="6" />
+      <node id="8704404528813122648" at="758,48,759,42" concept="6" />
       <node id="8704404528813122648" at="762,57,763,83" concept="5" />
       <node id="8704404528813122648" at="763,83,764,65" concept="1" />
       <node id="8704404528813122648" at="764,65,765,25" concept="6" />
@@ -3865,7 +3865,7 @@
       <node id="8704404528813122648" at="840,0,841,0" concept="8" trace="RestaurantArea$$C" />
       <node id="8704404528813122648" at="841,0,842,0" concept="8" trace="Menu$Na" />
       <node id="8704404528813122648" at="842,0,843,0" concept="8" trace="OwnerRelation$hN" />
-      <node id="8704404528813122648" at="843,0,844,0" concept="8" trace="EmployeRelation$sW" />
+      <node id="8704404528813122648" at="843,0,844,0" concept="8" trace="EmployeeRelation$sW" />
       <node id="8704404528813122648" at="847,0,848,0" concept="8" trace="city$OncX" />
       <node id="8704404528813122648" at="848,0,849,0" concept="8" trace="rooms$OnrY" />
       <node id="8704404528813122648" at="849,0,850,0" concept="8" trace="menus$OoB3" />
@@ -4021,7 +4021,7 @@
       <scope id="8704404528813122648" at="687,34,688,91" />
       <scope id="8704404528813122648" at="752,28,753,20" />
       <scope id="8704404528813122648" at="755,40,756,33" />
-      <scope id="8704404528813122648" at="758,48,759,41" />
+      <scope id="8704404528813122648" at="758,48,759,42" />
       <scope id="8704404528813122648" at="776,17,777,42" />
       <scope id="8704404528813122648" at="803,34,804,91" />
       <scope id="8704404528813122648" at="55,90,57,18" />

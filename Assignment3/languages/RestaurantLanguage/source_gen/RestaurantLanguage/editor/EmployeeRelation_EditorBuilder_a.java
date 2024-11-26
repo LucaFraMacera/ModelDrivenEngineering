@@ -39,11 +39,11 @@ import jetbrains.mps.lang.core.behavior.PropertyAttribute__BehaviorDescriptor;
 import jetbrains.mps.smodel.adapter.structure.MetaAdapterFactory;
 import org.jetbrains.mps.openapi.language.SConcept;
 
-/*package*/ class EmployeRelation_EditorBuilder_a extends AbstractEditorBuilder {
+/*package*/ class EmployeeRelation_EditorBuilder_a extends AbstractEditorBuilder {
   @NotNull
   private SNode myNode;
 
-  public EmployeRelation_EditorBuilder_a(@NotNull EditorContext context, @NotNull SNode node) {
+  public EmployeeRelation_EditorBuilder_a(@NotNull EditorContext context, @NotNull SNode node) {
     super(context);
     myNode = node;
   }
@@ -60,7 +60,7 @@ import org.jetbrains.mps.openapi.language.SConcept;
 
   private EditorCell createCollection_0() {
     EditorCell_Collection editorCell = new EditorCell_Collection(getEditorContext(), myNode, new CellLayout_Indent());
-    editorCell.setCellId("Collection_7ekt0c_a");
+    editorCell.setCellId("Collection_j6uuyp_a");
     editorCell.setBig(true);
     setCellContext(editorCell);
     editorCell.addEditorCell(createConstant_0());
@@ -70,7 +70,7 @@ import org.jetbrains.mps.openapi.language.SConcept;
   }
   private EditorCell createConstant_0() {
     EditorCell_Constant editorCell = new EditorCell_Constant(getEditorContext(), myNode, "{");
-    editorCell.setCellId("Constant_7ekt0c_a0");
+    editorCell.setCellId("Constant_j6uuyp_a0");
     Style style = new StyleImpl();
     style.set(StyleAttributes.TEXT_COLOR, getStyleRegistry().getSimpleColor(MPSColors.blue));
     style.set(StyleAttributes.MATCHING_LABEL, "body-brace");
@@ -80,7 +80,7 @@ import org.jetbrains.mps.openapi.language.SConcept;
   }
   private EditorCell createCollection_1() {
     EditorCell_Collection editorCell = new EditorCell_Collection(getEditorContext(), myNode, new CellLayout_Indent());
-    editorCell.setCellId("Collection_7ekt0c_b0");
+    editorCell.setCellId("Collection_j6uuyp_b0");
     Style style = new StyleImpl();
     style.set(StyleAttributes.SELECTABLE, false);
     editorCell.getStyle().putAll(style);
@@ -252,7 +252,7 @@ import org.jetbrains.mps.openapi.language.SConcept;
   }
   private EditorCell createConstant_1() {
     EditorCell_Constant editorCell = new EditorCell_Constant(getEditorContext(), myNode, "}");
-    editorCell.setCellId("Constant_7ekt0c_c0");
+    editorCell.setCellId("Constant_j6uuyp_c0");
     Style style = new StyleImpl();
     style.set(StyleAttributes.TEXT_COLOR, getStyleRegistry().getSimpleColor(MPSColors.blue));
     style.set(StyleAttributes.MATCHING_LABEL, "body-brace");

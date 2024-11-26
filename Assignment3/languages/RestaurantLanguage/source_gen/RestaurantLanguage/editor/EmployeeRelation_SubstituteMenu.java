@@ -22,34 +22,34 @@ import org.jetbrains.mps.openapi.language.SConcept;
 import jetbrains.mps.smodel.adapter.structure.MetaAdapterFactory;
 import org.jetbrains.mps.openapi.language.SReferenceLink;
 
-public class EmployeRelation_SubstituteMenu extends SubstituteMenuBase {
-  public EmployeRelation_SubstituteMenu() {
-    super(false, new EditorMenuDescriptorBase("default substitute menu for EmployeRelation. Generated from implicit smart reference attribute.", new SNodePointer("r:ed2e1c8b-f3ce-4973-8d88-0d8c7147e936(RestaurantLanguage.structure)", "8704404528813403160")));
+public class EmployeeRelation_SubstituteMenu extends SubstituteMenuBase {
+  public EmployeeRelation_SubstituteMenu() {
+    super(false, new EditorMenuDescriptorBase("default substitute menu for EmployeeRelation. Generated from implicit smart reference attribute.", new SNodePointer("r:ed2e1c8b-f3ce-4973-8d88-0d8c7147e936(RestaurantLanguage.structure)", "8704404528813403160")));
   }
   @NotNull
   @Override
   protected List<MenuPart<SubstituteMenuItem, SubstituteMenuContext>> getParts(final SubstituteMenuContext _context) {
     List<MenuPart<SubstituteMenuItem, SubstituteMenuContext>> result = new ArrayList<MenuPart<SubstituteMenuItem, SubstituteMenuContext>>();
-    result.add(new ConstraintsFilteringSubstituteMenuPartDecorator(new SMP_ReferenceScope_lrvxrm_a(), CONCEPTS.EmployeRelation$sW));
-    result.add(new SMP_Subconcepts_lrvxrm_b());
+    result.add(new ConstraintsFilteringSubstituteMenuPartDecorator(new SMP_ReferenceScope_hhcm1j_a(), CONCEPTS.EmployeeRelation$sW));
+    result.add(new SMP_Subconcepts_hhcm1j_b());
     return result;
   }
 
-  public class SMP_ReferenceScope_lrvxrm_a extends ReferenceScopeSubstituteMenuPart {
+  public class SMP_ReferenceScope_hhcm1j_a extends ReferenceScopeSubstituteMenuPart {
 
-    public SMP_ReferenceScope_lrvxrm_a() {
-      super(CONCEPTS.EmployeRelation$sW, LINKS.employe$hWt3, new EditorMenuDescriptorBase("reference scope substitute menu part", null));
+    public SMP_ReferenceScope_hhcm1j_a() {
+      super(CONCEPTS.EmployeeRelation$sW, LINKS.employe$hWt3, new EditorMenuDescriptorBase("reference scope substitute menu part", null));
     }
 
   }
-  public class SMP_Subconcepts_lrvxrm_b extends ConceptMenusPart<SubstituteMenuItem, SubstituteMenuContext> {
-    public SMP_Subconcepts_lrvxrm_b() {
-      super(new EditorMenuDescriptorBase("include menus for all the direct subconcepts of " + "EmployeRelation", null));
+  public class SMP_Subconcepts_hhcm1j_b extends ConceptMenusPart<SubstituteMenuItem, SubstituteMenuContext> {
+    public SMP_Subconcepts_hhcm1j_b() {
+      super(new EditorMenuDescriptorBase("include menus for all the direct subconcepts of " + "EmployeeRelation", null));
     }
 
     @Override
     protected Collection<SAbstractConcept> getConcepts(final SubstituteMenuContext _context) {
-      return getDirectDescendants(_context, CONCEPTS.EmployeRelation$sW);
+      return getDirectDescendants(_context, CONCEPTS.EmployeeRelation$sW);
     }
 
     @Override
@@ -59,7 +59,7 @@ public class EmployeRelation_SubstituteMenu extends SubstituteMenuBase {
   }
 
   private static final class CONCEPTS {
-    /*package*/ static final SConcept EmployeRelation$sW = MetaAdapterFactory.getConcept(0xb104fc7d0eb94ddcL, 0x828f1118413b5a6bL, 0x78cc41cd11396c18L, "RestaurantLanguage.structure.EmployeRelation");
+    /*package*/ static final SConcept EmployeeRelation$sW = MetaAdapterFactory.getConcept(0xb104fc7d0eb94ddcL, 0x828f1118413b5a6bL, 0x78cc41cd11396c18L, "RestaurantLanguage.structure.EmployeeRelation");
   }
 
   private static final class LINKS {

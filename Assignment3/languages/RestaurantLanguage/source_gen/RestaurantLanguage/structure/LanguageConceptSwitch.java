@@ -14,8 +14,8 @@ public final class LanguageConceptSwitch {
   public static final int Course = 2;
   public static final int Diagram = 3;
   public static final int DiningRoom = 4;
-  public static final int EmployeRelation = 5;
-  public static final int Employee = 6;
+  public static final int Employee = 5;
+  public static final int EmployeeRelation = 6;
   public static final int IRestaurantRelation = 7;
   public static final int Kitchen = 8;
   public static final int Menu = 9;
@@ -34,8 +34,8 @@ public final class LanguageConceptSwitch {
     builder.put(0x20a07844fbef2c44L, Course);
     builder.put(0x20a07844fbef3745L, Diagram);
     builder.put(0x20a07844fbef2c7dL, DiningRoom);
-    builder.put(0x78cc41cd11396c18L, EmployeRelation);
     builder.put(0x20a07844fbef2c5bL, Employee);
+    builder.put(0x78cc41cd11396c18L, EmployeeRelation);
     builder.put(0x529faf485a6b8e78L, IRestaurantRelation);
     builder.put(0x20a07844fbef2c7aL, Kitchen);
     builder.put(0x20a07844fbef2c77L, Menu);

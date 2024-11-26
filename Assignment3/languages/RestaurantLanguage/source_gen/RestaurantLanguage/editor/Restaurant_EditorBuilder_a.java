@@ -756,7 +756,7 @@ import org.jetbrains.mps.openapi.language.SInterfaceConcept;
       return LINKS.employes$Ooo2;
     }
     public SAbstractConcept getChildSConcept() {
-      return CONCEPTS.EmployeRelation$sW;
+      return CONCEPTS.EmployeeRelation$sW;
     }
 
     public EditorCell createNodeCell(SNode elementNode) {
@@ -840,7 +840,7 @@ import org.jetbrains.mps.openapi.language.SInterfaceConcept;
     /*package*/ static final SInterfaceConcept RestaurantArea$$C = MetaAdapterFactory.getInterfaceConcept(0xb104fc7d0eb94ddcL, 0x828f1118413b5a6bL, 0x20a07844fbef2c6eL, "RestaurantLanguage.structure.RestaurantArea");
     /*package*/ static final SConcept Menu$Na = MetaAdapterFactory.getConcept(0xb104fc7d0eb94ddcL, 0x828f1118413b5a6bL, 0x20a07844fbef2c77L, "RestaurantLanguage.structure.Menu");
     /*package*/ static final SConcept OwnerRelation$hN = MetaAdapterFactory.getConcept(0xb104fc7d0eb94ddcL, 0x828f1118413b5a6bL, 0x78cc41cd11396c16L, "RestaurantLanguage.structure.OwnerRelation");
-    /*package*/ static final SConcept EmployeRelation$sW = MetaAdapterFactory.getConcept(0xb104fc7d0eb94ddcL, 0x828f1118413b5a6bL, 0x78cc41cd11396c18L, "RestaurantLanguage.structure.EmployeRelation");
+    /*package*/ static final SConcept EmployeeRelation$sW = MetaAdapterFactory.getConcept(0xb104fc7d0eb94ddcL, 0x828f1118413b5a6bL, 0x78cc41cd11396c18L, "RestaurantLanguage.structure.EmployeeRelation");
   }
 
   private static final class LINKS {

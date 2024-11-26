@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<product version="3" modelHash="95vbguczld53lhcdslxeyd37tjc2pz7">
-  <files names="City_Constraints.java:ConstraintsAspectDescriptor.java:Employee_Constraints.java:IRestaurantRelation_Constraints.java:Owner_Constraints.java:Region_Constraints.java:RestaurantArea_Constraints.java:Restaurant_Constraints.java:Table_Constraints.java" />
+<product version="3" modelHash="-9cgbw17p04trddf8r45nz721d8tzg3l">
+  <files names="City_Constraints.java:ConstraintsAspectDescriptor.java:Course_Constraints.java:Employee_Constraints.java:IRestaurantRelation_Constraints.java:Owner_Constraints.java:Region_Constraints.java:RestaurantArea_Constraints.java:Restaurant_Constraints.java:Table_Constraints.java" />
 </product>
 

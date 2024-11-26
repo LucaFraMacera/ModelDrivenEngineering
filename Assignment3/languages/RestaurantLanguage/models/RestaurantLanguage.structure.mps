@@ -482,7 +482,7 @@
       <property role="20lmBu" value="fLJjDmT/aggregation" />
       <property role="20kJfa" value="employes" />
       <property role="20lbJX" value="fLJekj5/_0__n" />
-      <ref role="20lvS9" node="7zcgsOhemKo" resolve="EmployeRelation" />
+      <ref role="20lvS9" node="7zcgsOhemKo" resolve="EmployeeRelation" />
     </node>
     <node concept="1TJgyj" id="22wu4jVVOaE" role="1TKVEi">
       <property role="IQ2ns" value="2351011243167269546" />
@@ -515,7 +515,7 @@
   </node>
   <node concept="1TIwiD" id="7zcgsOhemKo">
     <property role="EcuMT" value="8704404528813403160" />
-    <property role="TrG5h" value="EmployeRelation" />
+    <property role="TrG5h" value="EmployeeRelation" />
     <property role="3GE5qa" value="Relations" />
     <ref role="1TJDcQ" to="tpck:gw2VY9q" />
     <node concept="1TJgyj" id="7zcgsOhemKp" role="1TKVEi">

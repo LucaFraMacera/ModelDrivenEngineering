@@ -7,8 +7,8 @@ import jetbrains.mps.openapi.editor.cells.EditorCell;
 import jetbrains.mps.openapi.editor.EditorContext;
 import org.jetbrains.mps.openapi.model.SNode;
 
-public class EmployeRelation_Editor extends DefaultNodeEditor {
+public class EmployeeRelation_Editor extends DefaultNodeEditor {
   public EditorCell createEditorCell(EditorContext editorContext, SNode node) {
-    return new EmployeRelation_EditorBuilder_a(editorContext, node).createCell();
+    return new EmployeeRelation_EditorBuilder_a(editorContext, node).createCell();
   }
 }

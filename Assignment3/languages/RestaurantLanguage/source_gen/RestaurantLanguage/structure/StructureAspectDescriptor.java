@@ -23,10 +23,12 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
   /*package*/ final ConceptDescriptor myConceptCourse = createDescriptorForCourse();
   /*package*/ final ConceptDescriptor myConceptDiagram = createDescriptorForDiagram();
   /*package*/ final ConceptDescriptor myConceptDiningRoom = createDescriptorForDiningRoom();
+  /*package*/ final ConceptDescriptor myConceptEmployeRelation = createDescriptorForEmployeRelation();
   /*package*/ final ConceptDescriptor myConceptEmployee = createDescriptorForEmployee();
   /*package*/ final ConceptDescriptor myConceptKitchen = createDescriptorForKitchen();
   /*package*/ final ConceptDescriptor myConceptMenu = createDescriptorForMenu();
   /*package*/ final ConceptDescriptor myConceptOwner = createDescriptorForOwner();
+  /*package*/ final ConceptDescriptor myConceptOwnerRelation = createDescriptorForOwnerRelation();
   /*package*/ final ConceptDescriptor myConceptPerson = createDescriptorForPerson();
   /*package*/ final ConceptDescriptor myConceptRegion = createDescriptorForRegion();
   /*package*/ final ConceptDescriptor myConceptRestaurant = createDescriptorForRestaurant();
@@ -37,6 +39,7 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
   /*package*/ final EnumerationDescriptor myEnumerationMaterial = new EnumerationDescriptor_Material();
   /*package*/ final EnumerationDescriptor myEnumerationRole = new EnumerationDescriptor_Role();
   /*package*/ final ConstrainedStringDatatypeDescriptor myCSDatatypeDate = new ConstrainedStringDatatypeDescriptorImpl(0xb104fc7d0eb94ddcL, 0x828f1118413b5a6bL, 0x20a07844fbef2c3aL, "Date", "r:ed2e1c8b-f3ce-4973-8d88-0d8c7147e936(RestaurantLanguage.structure)/2351011243167263802", "[0-9]{2}/[0-9]{2}/[0-9]{4}");
+  /*package*/ final ConstrainedStringDatatypeDescriptor myCSDatatypeFiscalCode = new ConstrainedStringDatatypeDescriptorImpl(0xb104fc7d0eb94ddcL, 0x828f1118413b5a6bL, 0x78cc41cd1138e4c3L, "FiscalCode", "r:ed2e1c8b-f3ce-4973-8d88-0d8c7147e936(RestaurantLanguage.structure)/8704404528813368515", "[A-Z]{5,6}[0-9]{2}[A-Z][0-9]{2}[A-Z][0-9]{2}[A-Z]");
   /*package*/ final ConstrainedStringDatatypeDescriptor myCSDatatypeFloat = new ConstrainedStringDatatypeDescriptorImpl(0xb104fc7d0eb94ddcL, 0x828f1118413b5a6bL, 0x20a07844fbef2c3cL, "Float", "r:ed2e1c8b-f3ce-4973-8d88-0d8c7147e936(RestaurantLanguage.structure)/2351011243167263804", "[0-9]+.?[0-9]*");
   /*package*/ final ConstrainedStringDatatypeDescriptor myCSDatatypeVatCode = new ConstrainedStringDatatypeDescriptorImpl(0xb104fc7d0eb94ddcL, 0x828f1118413b5a6bL, 0x20a07844fbef2c3dL, "VatCode", "r:ed2e1c8b-f3ce-4973-8d88-0d8c7147e936(RestaurantLanguage.structure)/2351011243167263805", "(IT)?[0-9]{11}");
   private final LanguageConceptSwitch myIndexSwitch;
@@ -54,7 +57,7 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
 
   @Override
   public Collection<ConceptDescriptor> getDescriptors() {
-    return Arrays.asList(myConceptBathroom, myConceptCity, myConceptCourse, myConceptDiagram, myConceptDiningRoom, myConceptEmployee, myConceptKitchen, myConceptMenu, myConceptOwner, myConceptPerson, myConceptRegion, myConceptRestaurant, myConceptRestaurantArea, myConceptTable);
+    return Arrays.asList(myConceptBathroom, myConceptCity, myConceptCourse, myConceptDiagram, myConceptDiningRoom, myConceptEmployeRelation, myConceptEmployee, myConceptKitchen, myConceptMenu, myConceptOwner, myConceptOwnerRelation, myConceptPerson, myConceptRegion, myConceptRestaurant, myConceptRestaurantArea, myConceptTable);
   }
 
   @Override
@@ -71,6 +74,8 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
         return myConceptDiagram;
       case LanguageConceptSwitch.DiningRoom:
         return myConceptDiningRoom;
+      case LanguageConceptSwitch.EmployeRelation:
+        return myConceptEmployeRelation;
       case LanguageConceptSwitch.Employee:
         return myConceptEmployee;
       case LanguageConceptSwitch.Kitchen:
@@ -79,6 +84,8 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
         return myConceptMenu;
       case LanguageConceptSwitch.Owner:
         return myConceptOwner;
+      case LanguageConceptSwitch.OwnerRelation:
+        return myConceptOwnerRelation;
       case LanguageConceptSwitch.Person:
         return myConceptPerson;
       case LanguageConceptSwitch.Region:
@@ -96,7 +103,7 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
 
   @Override
   public Collection<DataTypeDescriptor> getDataTypeDescriptors() {
-    return Arrays.asList(myEnumerationCourseType, myEnumerationGender, myEnumerationMaterial, myEnumerationRole, myCSDatatypeDate, myCSDatatypeFloat, myCSDatatypeVatCode);
+    return Arrays.asList(myEnumerationCourseType, myEnumerationGender, myEnumerationMaterial, myEnumerationRole, myCSDatatypeDate, myCSDatatypeFiscalCode, myCSDatatypeFloat, myCSDatatypeVatCode);
   }
 
   /*package*/ int internalIndex(SAbstractConcept c) {
@@ -153,6 +160,14 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
     b.aggregate("tables", 0x20a07844fbef2c7fL).target(0xb104fc7d0eb94ddcL, 0x828f1118413b5a6bL, 0x20a07844fbef2c73L).optional(true).ordered(true).multiple(true).origin("2351011243167263871").done();
     return b.create();
   }
+  private static ConceptDescriptor createDescriptorForEmployeRelation() {
+    ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("RestaurantLanguage", "EmployeRelation", 0xb104fc7d0eb94ddcL, 0x828f1118413b5a6bL, 0x78cc41cd11396c18L);
+    b.class_(false, false, false);
+    b.origin("r:ed2e1c8b-f3ce-4973-8d88-0d8c7147e936(RestaurantLanguage.structure)/8704404528813403160");
+    b.version(3);
+    b.associate("employe", 0x78cc41cd11396c19L).target(0xb104fc7d0eb94ddcL, 0x828f1118413b5a6bL, 0x20a07844fbef2c5bL).optional(false).origin("8704404528813403161").done();
+    return b.create();
+  }
   private static ConceptDescriptor createDescriptorForEmployee() {
     ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("RestaurantLanguage", "Employee", 0xb104fc7d0eb94ddcL, 0x828f1118413b5a6bL, 0x20a07844fbef2c5bL);
     b.class_(false, false, false);
@@ -192,6 +207,14 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
     b.property("vat", 0x20a07844fbef2c65L).type(MetaIdFactory.dataTypeId(0xb104fc7d0eb94ddcL, 0x828f1118413b5a6bL, 0x20a07844fbef2c3dL)).origin("2351011243167263845").done();
     return b.create();
   }
+  private static ConceptDescriptor createDescriptorForOwnerRelation() {
+    ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("RestaurantLanguage", "OwnerRelation", 0xb104fc7d0eb94ddcL, 0x828f1118413b5a6bL, 0x78cc41cd11396c16L);
+    b.class_(false, false, false);
+    b.origin("r:ed2e1c8b-f3ce-4973-8d88-0d8c7147e936(RestaurantLanguage.structure)/8704404528813403158");
+    b.version(3);
+    b.associate("owner", 0x78cc41cd11396c17L).target(0xb104fc7d0eb94ddcL, 0x828f1118413b5a6bL, 0x20a07844fbef2c63L).optional(false).origin("8704404528813403159").done();
+    return b.create();
+  }
   private static ConceptDescriptor createDescriptorForPerson() {
     ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("RestaurantLanguage", "Person", 0xb104fc7d0eb94ddcL, 0x828f1118413b5a6bL, 0x20a07844fbef2c51L);
     b.interface_();
@@ -199,7 +222,7 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
     b.origin("r:ed2e1c8b-f3ce-4973-8d88-0d8c7147e936(RestaurantLanguage.structure)/2351011243167263825");
     b.version(3);
     b.property("surname", 0x20a07844fbef2c53L).type(PrimitiveTypeId.STRING).origin("2351011243167263827").done();
-    b.property("fiscalCode", 0x20a07844fbef2c54L).type(PrimitiveTypeId.STRING).origin("2351011243167263828").done();
+    b.property("fiscalCode", 0x20a07844fbef2c54L).type(MetaIdFactory.dataTypeId(0xb104fc7d0eb94ddcL, 0x828f1118413b5a6bL, 0x78cc41cd1138e4c3L)).origin("2351011243167263828").done();
     b.property("birthDate", 0x20a07844fbef2c55L).type(MetaIdFactory.dataTypeId(0xb104fc7d0eb94ddcL, 0x828f1118413b5a6bL, 0x20a07844fbef2c3aL)).origin("2351011243167263829").done();
     b.property("gender", 0x20a07844fbef2c56L).type(MetaIdFactory.dataTypeId(0xb104fc7d0eb94ddcL, 0x828f1118413b5a6bL, 0x20a07844fbef2c57L)).origin("2351011243167263830").done();
     b.associate("birthPlace", 0x20a07844fbef2c5aL).target(0xb104fc7d0eb94ddcL, 0x828f1118413b5a6bL, 0x20a07844fbef2c40L).optional(false).origin("2351011243167263834").done();
@@ -223,8 +246,8 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
     b.property("telephone", 0x20a07844fbef42a2L).type(PrimitiveTypeId.STRING).origin("2351011243167269538").done();
     b.associate("city", 0x20a07844fbef42a4L).target(0xb104fc7d0eb94ddcL, 0x828f1118413b5a6bL, 0x20a07844fbef2c40L).optional(false).origin("2351011243167269540").done();
     b.aggregate("rooms", 0x20a07844fbef42a5L).target(0xb104fc7d0eb94ddcL, 0x828f1118413b5a6bL, 0x20a07844fbef2c6eL).optional(false).ordered(true).multiple(true).origin("2351011243167269541").done();
-    b.aggregate("owners", 0x20a07844fbef42a8L).target(0xb104fc7d0eb94ddcL, 0x828f1118413b5a6bL, 0x20a07844fbef2c63L).optional(false).ordered(true).multiple(true).origin("2351011243167269544").done();
-    b.aggregate("employes", 0x20a07844fbef42a9L).target(0xb104fc7d0eb94ddcL, 0x828f1118413b5a6bL, 0x20a07844fbef2c5bL).optional(true).ordered(true).multiple(true).origin("2351011243167269545").done();
+    b.aggregate("owners", 0x78cc41cd11396c1aL).target(0xb104fc7d0eb94ddcL, 0x828f1118413b5a6bL, 0x78cc41cd11396c16L).optional(false).ordered(true).multiple(true).origin("8704404528813403162").done();
+    b.aggregate("employes", 0x20a07844fbef42a9L).target(0xb104fc7d0eb94ddcL, 0x828f1118413b5a6bL, 0x78cc41cd11396c18L).optional(true).ordered(true).multiple(true).origin("2351011243167269545").done();
     b.aggregate("menus", 0x20a07844fbef42aaL).target(0xb104fc7d0eb94ddcL, 0x828f1118413b5a6bL, 0x20a07844fbef2c77L).optional(false).ordered(true).multiple(true).origin("2351011243167269546").done();
     return b.create();
   }

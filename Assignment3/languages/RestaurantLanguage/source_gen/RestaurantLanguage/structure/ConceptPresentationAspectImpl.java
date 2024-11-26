@@ -14,10 +14,12 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
   private ConceptPresentation props_Course;
   private ConceptPresentation props_Diagram;
   private ConceptPresentation props_DiningRoom;
+  private ConceptPresentation props_EmployeRelation;
   private ConceptPresentation props_Employee;
   private ConceptPresentation props_Kitchen;
   private ConceptPresentation props_Menu;
   private ConceptPresentation props_Owner;
+  private ConceptPresentation props_OwnerRelation;
   private ConceptPresentation props_Person;
   private ConceptPresentation props_Region;
   private ConceptPresentation props_Restaurant;
@@ -64,6 +66,13 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
           props_DiningRoom = cpb.create();
         }
         return props_DiningRoom;
+      case LanguageConceptSwitch.EmployeRelation:
+        if (props_EmployeRelation == null) {
+          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          cpb.presentationByReference(0xb104fc7d0eb94ddcL, 0x828f1118413b5a6bL, 0x78cc41cd11396c18L, 0x78cc41cd11396c19L, "employe", "", "");
+          props_EmployeRelation = cpb.create();
+        }
+        return props_EmployeRelation;
       case LanguageConceptSwitch.Employee:
         if (props_Employee == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
@@ -92,6 +101,13 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
           props_Owner = cpb.create();
         }
         return props_Owner;
+      case LanguageConceptSwitch.OwnerRelation:
+        if (props_OwnerRelation == null) {
+          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          cpb.presentationByReference(0xb104fc7d0eb94ddcL, 0x828f1118413b5a6bL, 0x78cc41cd11396c16L, 0x78cc41cd11396c17L, "owner", "", "");
+          props_OwnerRelation = cpb.create();
+        }
+        return props_OwnerRelation;
       case LanguageConceptSwitch.Person:
         if (props_Person == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();

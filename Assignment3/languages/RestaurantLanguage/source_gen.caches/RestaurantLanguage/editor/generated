@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<product version="3" modelHash="6pa1jthw5edok644thsidcdrjyaxfzh">
-  <files names="City_Editor.java:City_EditorBuilder_a.java:City_SubstituteMenu.java:Diagram_Editor.java:Diagram_EditorBuilder_a.java:EditorAspectDescriptorImpl.java:Employee_Editor.java:Employee_EditorBuilder_a.java:Employee_SubstituteMenu.java:Owner_SubstituteMenu.java:Region_Editor.java:Region_EditorBuilder_a.java:Restaurant_SubstituteMenu.java" />
+<product version="3" modelHash="-enn1gpm5x6nni4lyn9t1al2zc4mv73d">
+  <files names="Bathroom_Editor.java:Bathroom_EditorBuilder_a.java:City_Editor.java:City_EditorBuilder_a.java:City_SubstituteMenu.java:Course_Editor.java:Course_EditorBuilder_a.java:Diagram_Editor.java:Diagram_EditorBuilder_a.java:DiningRoom_Editor.java:DiningRoom_EditorBuilder_a.java:EditorAspectDescriptorImpl.java:EmployeRelation_SubstituteMenu.java:Employee_Editor.java:Employee_EditorBuilder_a.java:Employee_SubstituteMenu.java:Kitchen_Editor.java:Kitchen_EditorBuilder_a.java:Menu_Editor.java:Menu_EditorBuilder_a.java:OwnerRelation_SubstituteMenu.java:Owner_Editor.java:Owner_EditorBuilder_a.java:Owner_SubstituteMenu.java:Region_Editor.java:Region_EditorBuilder_a.java:Restaurant_Editor.java:Restaurant_EditorBuilder_a.java:Restaurant_SubstituteMenu.java:Table_Editor.java:Table_EditorBuilder_a.java" />
 </product>
 

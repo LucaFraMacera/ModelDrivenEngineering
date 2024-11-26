@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<debug-info version="2">
+  <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1068580123140:jetbrains.mps.baseLanguage.structure.ConstructorDeclaration" />
+  <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1068580123165:jetbrains.mps.baseLanguage.structure.InstanceMethodDeclaration" />
+  <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1068581242878:jetbrains.mps.baseLanguage.structure.ReturnStatement" />
+  <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1070462154015:jetbrains.mps.baseLanguage.structure.StaticFieldDeclaration" />
+  <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1070475587102:jetbrains.mps.baseLanguage.structure.SuperConstructorInvocation" />
+  <root>
+    <file name="GeneratedFeedbackAspectFeedback.java">
+      <unit at="10,0,17,0" name="RestaurantLanguage.feedback.GeneratedFeedbackAspectFeedback" />
+    </file>
+  </root>
+  <root nodeRef="r:199448eb-571c-4c58-8638-f42c71503ccb(RestaurantLanguage.feedback)/8704404528813121065">
+    <file name="Owner_FeedbackFeedback.java">
+      <node id="8704404528813121065" at="21,0,22,0" concept="3" trace="CONCEPT" />
+      <node id="8704404528813121074" at="26,86,27,73" concept="2" />
+      <node id="8704404528813121065" at="31,0,32,0" concept="3" trace="PROVIDERS" />
+      <node id="8704404528813121065" at="33,35,34,19" concept="4" />
+      <node id="8704404528813121065" at="39,58,40,30" concept="2" />
+      <node id="8704404528813121065" at="33,0,36,0" concept="0" trace="Owner_FeedbackFeedback#()V" />
+      <node id="8704404528813121074" at="24,0,29,0" concept="1" trace="yieldMessage#(Ljetbrains/mps/core/aspects/feedback/messages/IncorrectTargetChildRoleContext;)Ljetbrains/mps/core/aspects/feedback/messages/MessageProvider/Msg;" />
+      <node id="8704404528813121065" at="37,0,42,0" concept="1" trace="getDeclaredProviders#()Ljava/util/stream/Stream;" />
+      <node id="8704404528813121074" at="23,0,30,0" concept="3" trace="MSGPROVIDER_WhenChildRoleHasIncompatibleTargetConcept_oluj3v_a" />
+      <scope id="8704404528813121074" at="26,86,27,73" />
+      <scope id="8704404528813121065" at="33,35,34,19" />
+      <scope id="8704404528813121065" at="39,58,40,30" />
+      <scope id="8704404528813121065" at="33,0,36,0" />
+      <scope id="8704404528813121074" at="24,0,29,0">
+        <var name="context" id="8704404528813121074" />
+      </scope>
+      <scope id="8704404528813121065" at="37,0,42,0" />
+      <unit id="8704404528813121074" at="23,142,29,3" name="RestaurantLanguage.feedback.Owner_FeedbackFeedback$1" />
+      <unit id="8704404528813121065" at="20,0,43,0" name="RestaurantLanguage.feedback.Owner_FeedbackFeedback" />
+    </file>
+  </root>
+  <root nodeRef="r:199448eb-571c-4c58-8638-f42c71503ccb(RestaurantLanguage.feedback)/8704404528813122261">
+    <file name="Employee_FeedbackFeedback.java">
+      <node id="8704404528813122261" at="21,0,22,0" concept="3" trace="CONCEPT" />
+      <node id="8704404528813122263" at="26,86,27,66" concept="2" />
+      <node id="8704404528813122261" at="31,0,32,0" concept="3" trace="PROVIDERS" />
+      <node id="8704404528813122261" at="33,38,34,19" concept="4" />
+      <node id="8704404528813122261" at="39,58,40,30" concept="2" />
+      <node id="8704404528813122261" at="33,0,36,0" concept="0" trace="Employee_FeedbackFeedback#()V" />
+      <node id="8704404528813122263" at="24,0,29,0" concept="1" trace="yieldMessage#(Ljetbrains/mps/core/aspects/feedback/messages/IncorrectTargetChildRoleContext;)Ljetbrains/mps/core/aspects/feedback/messages/MessageProvider/Msg;" />
+      <node id="8704404528813122261" at="37,0,42,0" concept="1" trace="getDeclaredProviders#()Ljava/util/stream/Stream;" />
+      <node id="8704404528813122263" at="23,0,30,0" concept="3" trace="MSGPROVIDER_WhenChildRoleHasIncompatibleTargetConcept_vv18el_a" />
+      <scope id="8704404528813122263" at="26,86,27,66" />
+      <scope id="8704404528813122261" at="33,38,34,19" />
+      <scope id="8704404528813122261" at="39,58,40,30" />
+      <scope id="8704404528813122261" at="33,0,36,0" />
+      <scope id="8704404528813122263" at="24,0,29,0">
+        <var name="context" id="8704404528813122263" />
+      </scope>
+      <scope id="8704404528813122261" at="37,0,42,0" />
+      <unit id="8704404528813122263" at="23,142,29,3" name="RestaurantLanguage.feedback.Employee_FeedbackFeedback$1" />
+      <unit id="8704404528813122261" at="20,0,43,0" name="RestaurantLanguage.feedback.Employee_FeedbackFeedback" />
+    </file>
+  </root>
+  <root nodeRef="r:199448eb-571c-4c58-8638-f42c71503ccb(RestaurantLanguage.feedback)/8704404528813122276">
+    <file name="Restaurant_FeedbackFeedback.java">
+      <node id="8704404528813122276" at="21,0,22,0" concept="3" trace="CONCEPT" />
+      <node id="8704404528813122278" at="26,86,27,66" concept="2" />
+      <node id="8704404528813122276" at="31,0,32,0" concept="3" trace="PROVIDERS" />
+      <node id="8704404528813122276" at="33,40,34,19" concept="4" />
+      <node id="8704404528813122276" at="39,58,40,30" concept="2" />
+      <node id="8704404528813122276" at="33,0,36,0" concept="0" trace="Restaurant_FeedbackFeedback#()V" />
+      <node id="8704404528813122278" at="24,0,29,0" concept="1" trace="yieldMessage#(Ljetbrains/mps/core/aspects/feedback/messages/IncorrectTargetChildRoleContext;)Ljetbrains/mps/core/aspects/feedback/messages/MessageProvider/Msg;" />
+      <node id="8704404528813122276" at="37,0,42,0" concept="1" trace="getDeclaredProviders#()Ljava/util/stream/Stream;" />
+      <node id="8704404528813122278" at="23,0,30,0" concept="3" trace="MSGPROVIDER_WhenChildRoleHasIncompatibleTargetConcept_6syrue_a" />
+      <scope id="8704404528813122278" at="26,86,27,66" />
+      <scope id="8704404528813122276" at="33,40,34,19" />
+      <scope id="8704404528813122276" at="39,58,40,30" />
+      <scope id="8704404528813122276" at="33,0,36,0" />
+      <scope id="8704404528813122278" at="24,0,29,0">
+        <var name="context" id="8704404528813122278" />
+      </scope>
+      <scope id="8704404528813122276" at="37,0,42,0" />
+      <unit id="8704404528813122278" at="23,142,29,3" name="RestaurantLanguage.feedback.Restaurant_FeedbackFeedback$1" />
+      <unit id="8704404528813122276" at="20,0,43,0" name="RestaurantLanguage.feedback.Restaurant_FeedbackFeedback" />
+    </file>
+  </root>
+</debug-info>
+

@@ -52,6 +52,9 @@
       </concept>
     </language>
     <language id="ceab5195-25ea-4f22-9b92-103b95ca8c0c" name="jetbrains.mps.lang.core">
+      <concept id="1133920641626" name="jetbrains.mps.lang.core.structure.BaseConcept" flags="ng" index="2VYdi">
+        <property id="1193676396447" name="virtualPackage" index="3GE5qa" />
+      </concept>
       <concept id="1169194658468" name="jetbrains.mps.lang.core.structure.INamedConcept" flags="ngI" index="TrEIO">
         <property id="1169194664001" name="name" index="TrG5h" />
       </concept>
@@ -84,16 +87,19 @@
     <property role="3F6X1D" value="2351011243167263802" />
     <property role="TrG5h" value="Date" />
     <property role="FLfZY" value="[0-9]{2}/[0-9]{2}/[0-9]{4}" />
+    <property role="3GE5qa" value="Types" />
   </node>
   <node concept="Az7Fb" id="22wu4jVVMKW">
     <property role="3F6X1D" value="2351011243167263804" />
     <property role="TrG5h" value="Float" />
     <property role="FLfZY" value="[0-9]+.?[0-9]*" />
+    <property role="3GE5qa" value="Types" />
   </node>
   <node concept="Az7Fb" id="22wu4jVVMKX">
     <property role="3F6X1D" value="2351011243167263805" />
     <property role="TrG5h" value="VatCode" />
     <property role="FLfZY" value="(IT)?[0-9]{11}" />
+    <property role="3GE5qa" value="Types" />
   </node>
   <node concept="1TIwiD" id="22wu4jVVMKY">
     <property role="EcuMT" value="2351011243167263806" />
@@ -148,6 +154,7 @@
   <node concept="25R3W" id="22wu4jVVML9">
     <property role="3F6X1D" value="2351011243167263817" />
     <property role="TrG5h" value="CourseType" />
+    <property role="3GE5qa" value="Types" />
     <ref role="1H5jkz" node="22wu4jVVMLc" resolve="MAIN_DISH" />
     <node concept="25R33" id="22wu4jVVMLb" role="25R1y">
       <property role="3tVfz5" value="2351011243167263819" />
@@ -194,7 +201,7 @@
     <node concept="1TJgyi" id="22wu4jVVMLk" role="1TKVEl">
       <property role="IQ2nx" value="2351011243167263828" />
       <property role="TrG5h" value="fiscalCode" />
-      <ref role="AX2Wp" to="tpck:fKAOsGN" resolve="string" />
+      <ref role="AX2Wp" node="7zcgsOheej3" resolve="FiscalCode" />
     </node>
     <node concept="1TJgyi" id="22wu4jVVMLl" role="1TKVEl">
       <property role="IQ2nx" value="2351011243167263829" />
@@ -216,6 +223,7 @@
   <node concept="25R3W" id="22wu4jVVMLn">
     <property role="3F6X1D" value="2351011243167263831" />
     <property role="TrG5h" value="Gender" />
+    <property role="3GE5qa" value="Types" />
     <ref role="1H5jkz" node="22wu4jVVMLo" resolve="MALE" />
     <node concept="25R33" id="22wu4jVVMLo" role="25R1y">
       <property role="3tVfz5" value="2351011243167263832" />
@@ -259,6 +267,7 @@
   <node concept="25R3W" id="22wu4jVVMLx">
     <property role="3F6X1D" value="2351011243167263841" />
     <property role="TrG5h" value="Role" />
+    <property role="3GE5qa" value="Types" />
     <ref role="1H5jkz" node="22wu4jVUm9s" resolve="WAITER" />
     <node concept="25R33" id="22wu4jVUm9p" role="25R1y">
       <property role="3tVfz5" value="2351011243166884441" />
@@ -307,6 +316,7 @@
   <node concept="25R3W" id="22wu4jVVMLB">
     <property role="3F6X1D" value="2351011243167263847" />
     <property role="TrG5h" value="Material" />
+    <property role="3GE5qa" value="Types" />
     <ref role="1H5jkz" node="22wu4jVUm9C" resolve="WOOD" />
     <node concept="25R33" id="22wu4jVUm9C" role="25R1y">
       <property role="3tVfz5" value="2351011243166884456" />
@@ -460,19 +470,19 @@
       <property role="20lbJX" value="fLJekj6/_1__n" />
       <ref role="20lvS9" node="22wu4jVVMLI" resolve="RestaurantArea" />
     </node>
-    <node concept="1TJgyj" id="22wu4jVVOaC" role="1TKVEi">
-      <property role="IQ2ns" value="2351011243167269544" />
+    <node concept="1TJgyj" id="7zcgsOhemKq" role="1TKVEi">
+      <property role="IQ2ns" value="8704404528813403162" />
       <property role="20lmBu" value="fLJjDmT/aggregation" />
       <property role="20kJfa" value="owners" />
       <property role="20lbJX" value="fLJekj6/_1__n" />
-      <ref role="20lvS9" node="22wu4jVVMLz" resolve="Owner" />
+      <ref role="20lvS9" node="7zcgsOhemKm" resolve="OwnerRelation" />
     </node>
     <node concept="1TJgyj" id="22wu4jVVOaD" role="1TKVEi">
       <property role="IQ2ns" value="2351011243167269545" />
       <property role="20lmBu" value="fLJjDmT/aggregation" />
       <property role="20kJfa" value="employes" />
       <property role="20lbJX" value="fLJekj5/_0__n" />
-      <ref role="20lvS9" node="22wu4jVVMLr" resolve="Employee" />
+      <ref role="20lvS9" node="7zcgsOhemKo" resolve="EmployeRelation" />
     </node>
     <node concept="1TJgyj" id="22wu4jVVOaE" role="1TKVEi">
       <property role="IQ2ns" value="2351011243167269546" />
@@ -480,6 +490,36 @@
       <property role="20kJfa" value="menus" />
       <property role="20lbJX" value="fLJekj6/_1__n" />
       <ref role="20lvS9" node="22wu4jVVMLR" resolve="Menu" />
+    </node>
+  </node>
+  <node concept="Az7Fb" id="7zcgsOheej3">
+    <property role="3F6X1D" value="8704404528813368515" />
+    <property role="3GE5qa" value="Types" />
+    <property role="TrG5h" value="FiscalCode" />
+    <property role="FLfZY" value="[A-Z]{5,6}[0-9]{2}[A-Z][0-9]{2}[A-Z][0-9]{2}[A-Z]" />
+  </node>
+  <node concept="1TIwiD" id="7zcgsOhemKm">
+    <property role="EcuMT" value="8704404528813403158" />
+    <property role="TrG5h" value="OwnerRelation" />
+    <property role="3GE5qa" value="Relations" />
+    <ref role="1TJDcQ" to="tpck:gw2VY9q" />
+    <node concept="1TJgyj" id="7zcgsOhemKn" role="1TKVEi">
+      <property role="IQ2ns" value="8704404528813403159" />
+      <property role="20kJfa" value="owner" />
+      <property role="20lbJX" value="fLJekj4/_1" />
+      <ref role="20lvS9" node="22wu4jVVMLz" resolve="Owner" />
+    </node>
+  </node>
+  <node concept="1TIwiD" id="7zcgsOhemKo">
+    <property role="EcuMT" value="8704404528813403160" />
+    <property role="TrG5h" value="EmployeRelation" />
+    <property role="3GE5qa" value="Relations" />
+    <ref role="1TJDcQ" to="tpck:gw2VY9q" />
+    <node concept="1TJgyj" id="7zcgsOhemKp" role="1TKVEi">
+      <property role="IQ2ns" value="8704404528813403161" />
+      <property role="20kJfa" value="employe" />
+      <property role="20lbJX" value="fLJekj4/_1" />
+      <ref role="20lvS9" node="22wu4jVVMLr" resolve="Employee" />
     </node>
   </node>
 </model>

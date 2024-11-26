@@ -14,15 +14,17 @@ public final class LanguageConceptSwitch {
   public static final int Course = 2;
   public static final int Diagram = 3;
   public static final int DiningRoom = 4;
-  public static final int Employee = 5;
-  public static final int Kitchen = 6;
-  public static final int Menu = 7;
-  public static final int Owner = 8;
-  public static final int Person = 9;
-  public static final int Region = 10;
-  public static final int Restaurant = 11;
-  public static final int RestaurantArea = 12;
-  public static final int Table = 13;
+  public static final int EmployeRelation = 5;
+  public static final int Employee = 6;
+  public static final int Kitchen = 7;
+  public static final int Menu = 8;
+  public static final int Owner = 9;
+  public static final int OwnerRelation = 10;
+  public static final int Person = 11;
+  public static final int Region = 12;
+  public static final int Restaurant = 13;
+  public static final int RestaurantArea = 14;
+  public static final int Table = 15;
 
   public LanguageConceptSwitch() {
     LanguageConceptIndexBuilder builder = new LanguageConceptIndexBuilder(0xb104fc7d0eb94ddcL, 0x828f1118413b5a6bL);
@@ -31,10 +33,12 @@ public final class LanguageConceptSwitch {
     builder.put(0x20a07844fbef2c44L, Course);
     builder.put(0x20a07844fbef3745L, Diagram);
     builder.put(0x20a07844fbef2c7dL, DiningRoom);
+    builder.put(0x78cc41cd11396c18L, EmployeRelation);
     builder.put(0x20a07844fbef2c5bL, Employee);
     builder.put(0x20a07844fbef2c7aL, Kitchen);
     builder.put(0x20a07844fbef2c77L, Menu);
     builder.put(0x20a07844fbef2c63L, Owner);
+    builder.put(0x78cc41cd11396c16L, OwnerRelation);
     builder.put(0x20a07844fbef2c51L, Person);
     builder.put(0x20a07844fbef2c3eL, Region);
     builder.put(0x20a07844fbef429eL, Restaurant);

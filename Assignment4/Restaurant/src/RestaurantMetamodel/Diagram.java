@@ -26,7 +26,7 @@ import org.eclipse.emf.ecore.EObject;
 public interface Diagram extends EObject {
 	/**
 	 * Returns the value of the '<em><b>Elements</b></em>' containment reference list.
-	 * The list contents are of type {@link RestaurantMetamodel.NamedElement}.
+	 * The list contents are of type {@link RestaurantMetamodel.DiagramElement}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Elements</em>' containment reference list.
@@ -34,7 +34,7 @@ public interface Diagram extends EObject {
 	 * @model containment="true"
 	 * @generated
 	 */
-	EList<NamedElement> getElements();
+	EList<DiagramElement> getElements();
 
 	/**
 	 * Returns the value of the '<em><b>Name</b></em>' attribute.

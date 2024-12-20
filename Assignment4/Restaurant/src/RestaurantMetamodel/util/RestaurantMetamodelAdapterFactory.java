@@ -88,6 +88,50 @@ public class RestaurantMetamodelAdapterFactory extends AdapterFactoryImpl {
 				return createDiagramAdapter();
 			}
 			@Override
+			public Adapter casePerson(Person object) {
+				return createPersonAdapter();
+			}
+			@Override
+			public Adapter caseOwner(Owner object) {
+				return createOwnerAdapter();
+			}
+			@Override
+			public Adapter caseEmployee(Employee object) {
+				return createEmployeeAdapter();
+			}
+			@Override
+			public Adapter caseMenu(Menu object) {
+				return createMenuAdapter();
+			}
+			@Override
+			public Adapter caseCourse(Course object) {
+				return createCourseAdapter();
+			}
+			@Override
+			public Adapter caseRestaurantArea(RestaurantArea object) {
+				return createRestaurantAreaAdapter();
+			}
+			@Override
+			public Adapter caseDiningRoom(DiningRoom object) {
+				return createDiningRoomAdapter();
+			}
+			@Override
+			public Adapter caseTable(Table object) {
+				return createTableAdapter();
+			}
+			@Override
+			public Adapter caseKitchen(Kitchen object) {
+				return createKitchenAdapter();
+			}
+			@Override
+			public Adapter caseBathroom(Bathroom object) {
+				return createBathroomAdapter();
+			}
+			@Override
+			public Adapter caseDiagramElement(DiagramElement object) {
+				return createDiagramElementAdapter();
+			}
+			@Override
 			public Adapter defaultCase(EObject object) {
 				return createEObjectAdapter();
 			}
@@ -174,6 +218,160 @@ public class RestaurantMetamodelAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createDiagramAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link RestaurantMetamodel.Person <em>Person</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see RestaurantMetamodel.Person
+	 * @generated
+	 */
+	public Adapter createPersonAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link RestaurantMetamodel.Owner <em>Owner</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see RestaurantMetamodel.Owner
+	 * @generated
+	 */
+	public Adapter createOwnerAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link RestaurantMetamodel.Employee <em>Employee</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see RestaurantMetamodel.Employee
+	 * @generated
+	 */
+	public Adapter createEmployeeAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link RestaurantMetamodel.Menu <em>Menu</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see RestaurantMetamodel.Menu
+	 * @generated
+	 */
+	public Adapter createMenuAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link RestaurantMetamodel.Course <em>Course</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see RestaurantMetamodel.Course
+	 * @generated
+	 */
+	public Adapter createCourseAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link RestaurantMetamodel.RestaurantArea <em>Restaurant Area</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see RestaurantMetamodel.RestaurantArea
+	 * @generated
+	 */
+	public Adapter createRestaurantAreaAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link RestaurantMetamodel.DiningRoom <em>Dining Room</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see RestaurantMetamodel.DiningRoom
+	 * @generated
+	 */
+	public Adapter createDiningRoomAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link RestaurantMetamodel.Table <em>Table</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see RestaurantMetamodel.Table
+	 * @generated
+	 */
+	public Adapter createTableAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link RestaurantMetamodel.Kitchen <em>Kitchen</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see RestaurantMetamodel.Kitchen
+	 * @generated
+	 */
+	public Adapter createKitchenAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link RestaurantMetamodel.Bathroom <em>Bathroom</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see RestaurantMetamodel.Bathroom
+	 * @generated
+	 */
+	public Adapter createBathroomAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link RestaurantMetamodel.DiagramElement <em>Diagram Element</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see RestaurantMetamodel.DiagramElement
+	 * @generated
+	 */
+	public Adapter createDiagramElementAdapter() {
 		return null;
 	}
 

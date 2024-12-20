@@ -69,6 +69,7 @@ public class RestaurantMetamodelSwitch<T> extends Switch<T> {
 			case RestaurantMetamodelPackage.RESTAURANT: {
 				Restaurant restaurant = (Restaurant)theEObject;
 				T result = caseRestaurant(restaurant);
+				if (result == null) result = caseDiagramElement(restaurant);
 				if (result == null) result = caseNamedElement(restaurant);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
@@ -82,6 +83,7 @@ public class RestaurantMetamodelSwitch<T> extends Switch<T> {
 			case RestaurantMetamodelPackage.CITY: {
 				City city = (City)theEObject;
 				T result = caseCity(city);
+				if (result == null) result = caseDiagramElement(city);
 				if (result == null) result = caseNamedElement(city);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
@@ -89,6 +91,7 @@ public class RestaurantMetamodelSwitch<T> extends Switch<T> {
 			case RestaurantMetamodelPackage.REGION: {
 				Region region = (Region)theEObject;
 				T result = caseRegion(region);
+				if (result == null) result = caseDiagramElement(region);
 				if (result == null) result = caseNamedElement(region);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
@@ -96,6 +99,90 @@ public class RestaurantMetamodelSwitch<T> extends Switch<T> {
 			case RestaurantMetamodelPackage.DIAGRAM: {
 				Diagram diagram = (Diagram)theEObject;
 				T result = caseDiagram(diagram);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case RestaurantMetamodelPackage.PERSON: {
+				Person person = (Person)theEObject;
+				T result = casePerson(person);
+				if (result == null) result = caseDiagramElement(person);
+				if (result == null) result = caseNamedElement(person);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case RestaurantMetamodelPackage.OWNER: {
+				Owner owner = (Owner)theEObject;
+				T result = caseOwner(owner);
+				if (result == null) result = casePerson(owner);
+				if (result == null) result = caseDiagramElement(owner);
+				if (result == null) result = caseNamedElement(owner);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case RestaurantMetamodelPackage.EMPLOYEE: {
+				Employee employee = (Employee)theEObject;
+				T result = caseEmployee(employee);
+				if (result == null) result = casePerson(employee);
+				if (result == null) result = caseDiagramElement(employee);
+				if (result == null) result = caseNamedElement(employee);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case RestaurantMetamodelPackage.MENU: {
+				Menu menu = (Menu)theEObject;
+				T result = caseMenu(menu);
+				if (result == null) result = caseNamedElement(menu);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case RestaurantMetamodelPackage.COURSE: {
+				Course course = (Course)theEObject;
+				T result = caseCourse(course);
+				if (result == null) result = caseNamedElement(course);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case RestaurantMetamodelPackage.RESTAURANT_AREA: {
+				RestaurantArea restaurantArea = (RestaurantArea)theEObject;
+				T result = caseRestaurantArea(restaurantArea);
+				if (result == null) result = caseNamedElement(restaurantArea);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case RestaurantMetamodelPackage.DINING_ROOM: {
+				DiningRoom diningRoom = (DiningRoom)theEObject;
+				T result = caseDiningRoom(diningRoom);
+				if (result == null) result = caseRestaurantArea(diningRoom);
+				if (result == null) result = caseNamedElement(diningRoom);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case RestaurantMetamodelPackage.TABLE: {
+				Table table = (Table)theEObject;
+				T result = caseTable(table);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case RestaurantMetamodelPackage.KITCHEN: {
+				Kitchen kitchen = (Kitchen)theEObject;
+				T result = caseKitchen(kitchen);
+				if (result == null) result = caseRestaurantArea(kitchen);
+				if (result == null) result = caseNamedElement(kitchen);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case RestaurantMetamodelPackage.BATHROOM: {
+				Bathroom bathroom = (Bathroom)theEObject;
+				T result = caseBathroom(bathroom);
+				if (result == null) result = caseRestaurantArea(bathroom);
+				if (result == null) result = caseNamedElement(bathroom);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case RestaurantMetamodelPackage.DIAGRAM_ELEMENT: {
+				DiagramElement diagramElement = (DiagramElement)theEObject;
+				T result = caseDiagramElement(diagramElement);
+				if (result == null) result = caseNamedElement(diagramElement);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -175,6 +262,171 @@ public class RestaurantMetamodelSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseDiagram(Diagram object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Person</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Person</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T casePerson(Person object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Owner</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Owner</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseOwner(Owner object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Employee</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Employee</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseEmployee(Employee object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Menu</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Menu</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseMenu(Menu object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Course</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Course</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseCourse(Course object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Restaurant Area</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Restaurant Area</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseRestaurantArea(RestaurantArea object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Dining Room</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Dining Room</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseDiningRoom(DiningRoom object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Table</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Table</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseTable(Table object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Kitchen</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Kitchen</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseKitchen(Kitchen object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Bathroom</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Bathroom</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseBathroom(Bathroom object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Diagram Element</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Diagram Element</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseDiagramElement(DiagramElement object) {
 		return null;
 	}
 

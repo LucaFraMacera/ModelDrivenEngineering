@@ -4,9 +4,6 @@ package RestaurantMetamodel.tests;
 
 import RestaurantMetamodel.Restaurant;
 import RestaurantMetamodel.RestaurantMetamodelFactory;
-
-import junit.framework.TestCase;
-
 import junit.textui.TestRunner;
 
 /**
@@ -15,15 +12,7 @@ import junit.textui.TestRunner;
  * <!-- end-user-doc -->
  * @generated
  */
-public class RestaurantTest extends TestCase {
-
-	/**
-	 * The fixture for this Restaurant test case.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected Restaurant fixture = null;
+public class RestaurantTest extends DiagramElementTest {
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -45,23 +34,14 @@ public class RestaurantTest extends TestCase {
 	}
 
 	/**
-	 * Sets the fixture for this Restaurant test case.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void setFixture(Restaurant fixture) {
-		this.fixture = fixture;
-	}
-
-	/**
 	 * Returns the fixture for this Restaurant test case.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	protected Restaurant getFixture() {
-		return fixture;
+		return (Restaurant)fixture;
 	}
 
 	/**

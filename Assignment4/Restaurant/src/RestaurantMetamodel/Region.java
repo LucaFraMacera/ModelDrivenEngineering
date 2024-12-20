@@ -13,5 +13,5 @@ package RestaurantMetamodel;
  * @model
  * @generated
  */
-public interface Region extends NamedElement {
+public interface Region extends DiagramElement {
 } // Region

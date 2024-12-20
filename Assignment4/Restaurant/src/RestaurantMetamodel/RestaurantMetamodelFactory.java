@@ -58,6 +58,87 @@ public interface RestaurantMetamodelFactory extends EFactory {
 	Diagram createDiagram();
 
 	/**
+	 * Returns a new object of class '<em>Owner</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Owner</em>'.
+	 * @generated
+	 */
+	Owner createOwner();
+
+	/**
+	 * Returns a new object of class '<em>Employee</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Employee</em>'.
+	 * @generated
+	 */
+	Employee createEmployee();
+
+	/**
+	 * Returns a new object of class '<em>Menu</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Menu</em>'.
+	 * @generated
+	 */
+	Menu createMenu();
+
+	/**
+	 * Returns a new object of class '<em>Course</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Course</em>'.
+	 * @generated
+	 */
+	Course createCourse();
+
+	/**
+	 * Returns a new object of class '<em>Restaurant Area</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Restaurant Area</em>'.
+	 * @generated
+	 */
+	RestaurantArea createRestaurantArea();
+
+	/**
+	 * Returns a new object of class '<em>Dining Room</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Dining Room</em>'.
+	 * @generated
+	 */
+	DiningRoom createDiningRoom();
+
+	/**
+	 * Returns a new object of class '<em>Table</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Table</em>'.
+	 * @generated
+	 */
+	Table createTable();
+
+	/**
+	 * Returns a new object of class '<em>Kitchen</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Kitchen</em>'.
+	 * @generated
+	 */
+	Kitchen createKitchen();
+
+	/**
+	 * Returns a new object of class '<em>Bathroom</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Bathroom</em>'.
+	 * @generated
+	 */
+	Bathroom createBathroom();
+
+	/**
 	 * Returns the package supported by this factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

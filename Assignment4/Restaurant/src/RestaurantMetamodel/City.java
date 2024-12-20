@@ -20,7 +20,7 @@ package RestaurantMetamodel;
  * @model
  * @generated
  */
-public interface City extends NamedElement {
+public interface City extends DiagramElement {
 	/**
 	 * Returns the value of the '<em><b>Cap</b></em>' attribute.
 	 * <!-- begin-user-doc -->

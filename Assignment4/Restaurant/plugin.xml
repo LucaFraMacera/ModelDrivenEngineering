@@ -11,7 +11,7 @@
       <package
             uri="https://restaurant/RM"
             class="RestaurantMetamodel.RestaurantMetamodelPackage"
-            genModel="models/RestaurantMetamodel.genmodel"/>
+            genModel="model/RestaurantMetamodel.genmodel"/>
    </extension>
 
 </plugin>

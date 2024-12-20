@@ -164,6 +164,213 @@ public class RestaurantMetamodelItemProviderAdapterFactory extends RestaurantMet
 	}
 
 	/**
+	 * This keeps track of the one adapter used for all {@link RestaurantMetamodel.Owner} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected OwnerItemProvider ownerItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link RestaurantMetamodel.Owner}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createOwnerAdapter() {
+		if (ownerItemProvider == null) {
+			ownerItemProvider = new OwnerItemProvider(this);
+		}
+
+		return ownerItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link RestaurantMetamodel.Employee} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected EmployeeItemProvider employeeItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link RestaurantMetamodel.Employee}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createEmployeeAdapter() {
+		if (employeeItemProvider == null) {
+			employeeItemProvider = new EmployeeItemProvider(this);
+		}
+
+		return employeeItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link RestaurantMetamodel.Menu} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected MenuItemProvider menuItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link RestaurantMetamodel.Menu}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createMenuAdapter() {
+		if (menuItemProvider == null) {
+			menuItemProvider = new MenuItemProvider(this);
+		}
+
+		return menuItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link RestaurantMetamodel.Course} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected CourseItemProvider courseItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link RestaurantMetamodel.Course}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createCourseAdapter() {
+		if (courseItemProvider == null) {
+			courseItemProvider = new CourseItemProvider(this);
+		}
+
+		return courseItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link RestaurantMetamodel.RestaurantArea} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected RestaurantAreaItemProvider restaurantAreaItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link RestaurantMetamodel.RestaurantArea}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createRestaurantAreaAdapter() {
+		if (restaurantAreaItemProvider == null) {
+			restaurantAreaItemProvider = new RestaurantAreaItemProvider(this);
+		}
+
+		return restaurantAreaItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link RestaurantMetamodel.DiningRoom} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected DiningRoomItemProvider diningRoomItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link RestaurantMetamodel.DiningRoom}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createDiningRoomAdapter() {
+		if (diningRoomItemProvider == null) {
+			diningRoomItemProvider = new DiningRoomItemProvider(this);
+		}
+
+		return diningRoomItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link RestaurantMetamodel.Table} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected TableItemProvider tableItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link RestaurantMetamodel.Table}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createTableAdapter() {
+		if (tableItemProvider == null) {
+			tableItemProvider = new TableItemProvider(this);
+		}
+
+		return tableItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link RestaurantMetamodel.Kitchen} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected KitchenItemProvider kitchenItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link RestaurantMetamodel.Kitchen}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createKitchenAdapter() {
+		if (kitchenItemProvider == null) {
+			kitchenItemProvider = new KitchenItemProvider(this);
+		}
+
+		return kitchenItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link RestaurantMetamodel.Bathroom} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected BathroomItemProvider bathroomItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link RestaurantMetamodel.Bathroom}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createBathroomAdapter() {
+		if (bathroomItemProvider == null) {
+			bathroomItemProvider = new BathroomItemProvider(this);
+		}
+
+		return bathroomItemProvider;
+	}
+
+	/**
 	 * This returns the root adapter factory that contains this factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -272,6 +479,15 @@ public class RestaurantMetamodelItemProviderAdapterFactory extends RestaurantMet
 		if (cityItemProvider != null) cityItemProvider.dispose();
 		if (regionItemProvider != null) regionItemProvider.dispose();
 		if (diagramItemProvider != null) diagramItemProvider.dispose();
+		if (ownerItemProvider != null) ownerItemProvider.dispose();
+		if (employeeItemProvider != null) employeeItemProvider.dispose();
+		if (menuItemProvider != null) menuItemProvider.dispose();
+		if (courseItemProvider != null) courseItemProvider.dispose();
+		if (restaurantAreaItemProvider != null) restaurantAreaItemProvider.dispose();
+		if (diningRoomItemProvider != null) diningRoomItemProvider.dispose();
+		if (tableItemProvider != null) tableItemProvider.dispose();
+		if (kitchenItemProvider != null) kitchenItemProvider.dispose();
+		if (bathroomItemProvider != null) bathroomItemProvider.dispose();
 	}
 
 }

@@ -3,7 +3,7 @@
 package RestaurantMetamodel.impl;
 
 import RestaurantMetamodel.Diagram;
-import RestaurantMetamodel.NamedElement;
+import RestaurantMetamodel.DiagramElement;
 import RestaurantMetamodel.RestaurantMetamodelPackage;
 
 import java.util.Collection;
@@ -45,7 +45,7 @@ public class DiagramImpl extends MinimalEObjectImpl.Container implements Diagram
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<NamedElement> elements;
+	protected EList<DiagramElement> elements;
 
 	/**
 	 * The default value of the '{@link #getName() <em>Name</em>}' attribute.
@@ -92,9 +92,9 @@ public class DiagramImpl extends MinimalEObjectImpl.Container implements Diagram
 	 * @generated
 	 */
 	@Override
-	public EList<NamedElement> getElements() {
+	public EList<DiagramElement> getElements() {
 		if (elements == null) {
-			elements = new EObjectContainmentEList<NamedElement>(NamedElement.class, this, RestaurantMetamodelPackage.DIAGRAM__ELEMENTS);
+			elements = new EObjectContainmentEList<DiagramElement>(DiagramElement.class, this, RestaurantMetamodelPackage.DIAGRAM__ELEMENTS);
 		}
 		return elements;
 	}
@@ -163,7 +163,7 @@ public class DiagramImpl extends MinimalEObjectImpl.Container implements Diagram
 		switch (featureID) {
 			case RestaurantMetamodelPackage.DIAGRAM__ELEMENTS:
 				getElements().clear();
-				getElements().addAll((Collection<? extends NamedElement>)newValue);
+				getElements().addAll((Collection<? extends DiagramElement>)newValue);
 				return;
 			case RestaurantMetamodelPackage.DIAGRAM__NAME:
 				setName((String)newValue);

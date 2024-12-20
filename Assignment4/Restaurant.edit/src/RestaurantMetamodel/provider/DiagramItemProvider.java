@@ -193,6 +193,16 @@ public class DiagramItemProvider
 			(createChildParameter
 				(RestaurantMetamodelPackage.Literals.DIAGRAM__ELEMENTS,
 				 RestaurantMetamodelFactory.eINSTANCE.createRegion()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(RestaurantMetamodelPackage.Literals.DIAGRAM__ELEMENTS,
+				 RestaurantMetamodelFactory.eINSTANCE.createOwner()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(RestaurantMetamodelPackage.Literals.DIAGRAM__ELEMENTS,
+				 RestaurantMetamodelFactory.eINSTANCE.createEmployee()));
 	}
 
 	/**

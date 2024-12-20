@@ -22,24 +22,6 @@
       cap="92020"
       region="//@elements.1"/>
   <elements
-      xsi:type="RM:Owner"
-      name="Giuseppe"
-      surname="Carlino"
-      fiscalCode="CAGIR68D12G48X"
-      birthDate="1968-12-12T00:00:00.000+0100"
-      birthPlace="//@elements.3"
-      vat="IT11111111111"/>
-  <elements
-      xsi:type="RM:Employee"
-      name="Mario"
-      surname="Bianchi"
-      fiscalCode="BNCMRA98L08E37J"
-      birthDate="1998-07-08T00:00:00.000+0200"
-      birthPlace="//@elements.2"
-      contractExpirationDate="2025-01-16T00:00:00.000+0100"
-      contractSignDate="2024-11-04T00:00:00.000+0100"
-      salary="1200.0"/>
-  <elements
       xsi:type="RM:Restaurant"
       name="Pizzeria Okay"
       street="Piazza Santa Chiara 51"
@@ -69,6 +51,22 @@
           number="4"
           numberOfSeats="3"/>
     </rooms>
+    <owners
+        name="Giuseppe"
+        surname="Carlino"
+        fiscalCode="CAGIR68D12G48X"
+        birthDate="1968-12-12T00:00:00.000+0100"
+        birthPlace="//@elements.3"
+        vat="IT11111111111"/>
+    <employees
+        name="Mario"
+        surname="Bianchi"
+        fiscalCode="BNCMRA98L08E37J"
+        birthDate="1998-07-08T00:00:00.000+0200"
+        birthPlace="//@elements.2"
+        contractExpirationDate="2025-01-16T00:00:00.000+0100"
+        contractSignDate="2024-11-04T00:00:00.000+0100"
+        salary="1200.0"/>
     <menus name="Menu">
       <courses
           name="Capricciosa"

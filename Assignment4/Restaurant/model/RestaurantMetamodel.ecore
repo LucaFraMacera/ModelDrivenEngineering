@@ -82,7 +82,7 @@
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Employee" eSuperTypes="#//Person">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="contractExpirationDate"
-        lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDate"/>
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDate"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="contractSignDate" lowerBound="1"
         eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDate"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="salary" lowerBound="1"

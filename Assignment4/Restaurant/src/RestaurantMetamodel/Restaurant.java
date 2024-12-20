@@ -2,6 +2,8 @@
  */
 package RestaurantMetamodel;
 
+import java.util.Map;
+import org.eclipse.emf.common.util.DiagnosticChain;
 import org.eclipse.emf.common.util.EList;
 
 
@@ -21,10 +23,12 @@ import org.eclipse.emf.common.util.EList;
  *   <li>{@link RestaurantMetamodel.Restaurant#getOwners <em>Owners</em>}</li>
  *   <li>{@link RestaurantMetamodel.Restaurant#getEmployees <em>Employees</em>}</li>
  *   <li>{@link RestaurantMetamodel.Restaurant#getMenus <em>Menus</em>}</li>
+ *   <li>{@link RestaurantMetamodel.Restaurant#getNumberOfEmployes <em>Number Of Employes</em>}</li>
+ *   <li>{@link RestaurantMetamodel.Restaurant#getTotalArea <em>Total Area</em>}</li>
  * </ul>
  *
  * @see RestaurantMetamodel.RestaurantMetamodelPackage#getRestaurant()
- * @model
+ * @model annotation="http://www.eclipse.org/emf/2002/Ecore constraints='MustBeOwned'"
  * @generated
  */
 public interface Restaurant extends DiagramElement {
@@ -142,4 +146,65 @@ public interface Restaurant extends DiagramElement {
 	 * @generated
 	 */
 	EList<Menu> getMenus();
+
+	/**
+	 * Returns the value of the '<em><b>Number Of Employes</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Number Of Employes</em>' attribute.
+	 * @see #setNumberOfEmployes(int)
+	 * @see RestaurantMetamodel.RestaurantMetamodelPackage#getRestaurant_NumberOfEmployes()
+	 * @model required="true" derived="true"
+	 * @generated
+	 */
+	int getNumberOfEmployes();
+
+	/**
+	 * Sets the value of the '{@link RestaurantMetamodel.Restaurant#getNumberOfEmployes <em>Number Of Employes</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Number Of Employes</em>' attribute.
+	 * @see #getNumberOfEmployes()
+	 * @generated
+	 */
+	void setNumberOfEmployes(int value);
+
+	/**
+	 * Returns the value of the '<em><b>Total Area</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Total Area</em>' attribute.
+	 * @see #setTotalArea(float)
+	 * @see RestaurantMetamodel.RestaurantMetamodelPackage#getRestaurant_TotalArea()
+	 * @model required="true" derived="true"
+	 * @generated
+	 */
+	float getTotalArea();
+
+	/**
+	 * Sets the value of the '{@link RestaurantMetamodel.Restaurant#getTotalArea <em>Total Area</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Total Area</em>' attribute.
+	 * @see #getTotalArea()
+	 * @generated
+	 */
+	void setTotalArea(float value);
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @model required="true"
+	 *        annotation="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot body='rooms-&gt;selectByType(Bathroom)-&gt;select(b | b.isAccessible)-&gt;size() &gt; 0'"
+	 * @generated
+	 */
+	boolean hasAccessibleToilets();
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @model annotation="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot body='\n\t\t\towners-&gt;size() &gt; 0'"
+	 * @generated
+	 */
+	boolean MustBeOwned(DiagnosticChain diagnostics, Map<Object, Object> context);
 } // Restaurant

@@ -40,6 +40,9 @@
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference RestaurantMetamodel.ecore#//Restaurant/owners"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference RestaurantMetamodel.ecore#//Restaurant/employees"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference RestaurantMetamodel.ecore#//Restaurant/menus"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute RestaurantMetamodel.ecore#//Restaurant/numberOfEmployes"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute RestaurantMetamodel.ecore#//Restaurant/totalArea"/>
+      <genOperations ecoreOperation="RestaurantMetamodel.ecore#//Restaurant/hasAccessibleToilets"/>
     </genClasses>
     <genClasses image="false" ecoreClass="RestaurantMetamodel.ecore#//NamedElement">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute RestaurantMetamodel.ecore#//NamedElement/name"/>
@@ -71,6 +74,10 @@
     </genClasses>
     <genClasses ecoreClass="RestaurantMetamodel.ecore#//Menu">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference RestaurantMetamodel.ecore#//Menu/courses"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute RestaurantMetamodel.ecore#//Menu/numberOfCourses"/>
+      <genOperations ecoreOperation="RestaurantMetamodel.ecore#//Menu/hasCourseType">
+        <genParameters ecoreParameter="RestaurantMetamodel.ecore#//Menu/hasCourseType/courseType"/>
+      </genOperations>
     </genClasses>
     <genClasses ecoreClass="RestaurantMetamodel.ecore#//Course">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute RestaurantMetamodel.ecore#//Course/price"/>
@@ -83,11 +90,13 @@
     </genClasses>
     <genClasses ecoreClass="RestaurantMetamodel.ecore#//DiningRoom">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference RestaurantMetamodel.ecore#//DiningRoom/tables"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute RestaurantMetamodel.ecore#//DiningRoom/numberOfTables"/>
     </genClasses>
     <genClasses ecoreClass="RestaurantMetamodel.ecore#//Table">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute RestaurantMetamodel.ecore#//Table/number"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute RestaurantMetamodel.ecore#//Table/numberOfSeats"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute RestaurantMetamodel.ecore#//Table/material"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference RestaurantMetamodel.ecore#//Table/diningRoom"/>
     </genClasses>
     <genClasses ecoreClass="RestaurantMetamodel.ecore#//Kitchen">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute RestaurantMetamodel.ecore#//Kitchen/numberOfStoves"/>

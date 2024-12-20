@@ -15,7 +15,9 @@ import org.eclipse.emf.common.notify.Notification;
 
 import org.eclipse.emf.ecore.EStructuralFeature;
 
+import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
+import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 
 /**
@@ -46,8 +48,31 @@ public class DiningRoomItemProvider extends RestaurantAreaItemProvider {
 		if (itemPropertyDescriptors == null) {
 			super.getPropertyDescriptors(object);
 
+			addNumberOfTablesPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
+	}
+
+	/**
+	 * This adds a property descriptor for the Number Of Tables feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addNumberOfTablesPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_DiningRoom_numberOfTables_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_DiningRoom_numberOfTables_feature", "_UI_DiningRoom_type"),
+				 RestaurantMetamodelPackage.Literals.DINING_ROOM__NUMBER_OF_TABLES,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.INTEGRAL_VALUE_IMAGE,
+				 null,
+				 null));
 	}
 
 	/**
@@ -118,6 +143,9 @@ public class DiningRoomItemProvider extends RestaurantAreaItemProvider {
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(DiningRoom.class)) {
+			case RestaurantMetamodelPackage.DINING_ROOM__NUMBER_OF_TABLES:
+				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
+				return;
 			case RestaurantMetamodelPackage.DINING_ROOM__TABLES:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;

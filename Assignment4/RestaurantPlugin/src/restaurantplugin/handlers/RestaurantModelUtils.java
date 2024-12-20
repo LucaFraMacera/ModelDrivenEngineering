@@ -26,7 +26,7 @@ import RestaurantMetamodel.*;
 
 public class RestaurantModelUtils {
 	
-	public final static String SERIALIZED_MODEL_FILENAME = "test.xmi";
+	public final static String SERIALIZED_MODEL_FILENAME = "RestaurantModel.xmi";
 	
 	private static Date getDateFromLocalDate(LocalDate localDate) {
 		return Date.from(localDate.atStartOfDay(ZoneId.systemDefault()).toInstant());
@@ -38,7 +38,7 @@ public class RestaurantModelUtils {
 		Region region1 = ModelUtils.createRegion("Abruzzo");
 		City city1 = ModelUtils.createCity("Palma di Montechiaro", "92020", region);
 		City city2 = ModelUtils.createCity("Vasto", "56054", region1);
-		Owner owner = ModelUtils.createOwner("Giuseppe", "Carlino", "IT111111111111", "CAGIR68D12G48X",getDateFromLocalDate(LocalDate.of(1968, 12, 12)), city1, Gender.FEMALE);
+		Owner owner = ModelUtils.createOwner("Giuseppe", "Carlino", "IT111111111111", "CAGIR68D12G48X",getDateFromLocalDate(LocalDate.of(1968, 12, 12)), city1, Gender.MALE);
 		Owner king = ModelUtils.createOwner("Michael", "Piccirilli", "IT222222222222", "PICMIC18O02F46K", getDateFromLocalDate(LocalDate.of(2002, 8, 18)), city1, Gender.FEMALE);
 		Employee employee = ModelUtils.createEmployee("Mario", "Bianchi", "BNCMRA98L08E37J", getDateFromLocalDate(LocalDate.of(1998, 7, 8)), city2, Gender.MALE, Role.WAITER, 1200.0f, getDateFromLocalDate(LocalDate.of(2025, 1, 16)), getDateFromLocalDate(LocalDate.of(2024, 11, 04)));
 		Bathroom bathroom = ModelUtils.createBathroom("Bagno", 1, Gender.MALE, false, 4f, 2f);

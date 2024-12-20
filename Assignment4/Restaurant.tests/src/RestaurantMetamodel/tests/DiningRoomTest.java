@@ -11,6 +11,12 @@ import junit.textui.TestRunner;
  * <!-- begin-user-doc -->
  * A test case for the model object '<em><b>Dining Room</b></em>'.
  * <!-- end-user-doc -->
+ * <p>
+ * The following features are tested:
+ * <ul>
+ *   <li>{@link RestaurantMetamodel.DiningRoom#getNumberOfTables() <em>Number Of Tables</em>}</li>
+ * </ul>
+ * </p>
  * @generated
  */
 public class DiningRoomTest extends RestaurantAreaTest {
@@ -65,6 +71,32 @@ public class DiningRoomTest extends RestaurantAreaTest {
 	@Override
 	protected void tearDown() throws Exception {
 		setFixture(null);
+	}
+
+	/**
+	 * Tests the '{@link RestaurantMetamodel.DiningRoom#getNumberOfTables() <em>Number Of Tables</em>}' feature getter.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see RestaurantMetamodel.DiningRoom#getNumberOfTables()
+	 * @generated
+	 */
+	public void testGetNumberOfTables() {
+		// TODO: implement this feature getter test method
+		// Ensure that you remove @generated or mark it @generated NOT
+		fail();
+	}
+
+	/**
+	 * Tests the '{@link RestaurantMetamodel.DiningRoom#setNumberOfTables(int) <em>Number Of Tables</em>}' feature setter.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see RestaurantMetamodel.DiningRoom#setNumberOfTables(int)
+	 * @generated
+	 */
+	public void testSetNumberOfTables() {
+		// TODO: implement this feature setter test method
+		// Ensure that you remove @generated or mark it @generated NOT
+		fail();
 	}
 
 } //DiningRoomTest

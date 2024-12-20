@@ -2,6 +2,9 @@
  */
 package RestaurantMetamodel;
 
+import java.util.Map;
+import org.eclipse.emf.common.util.DiagnosticChain;
+
 
 /**
  * <!-- begin-user-doc -->
@@ -18,7 +21,7 @@ package RestaurantMetamodel;
  * </ul>
  *
  * @see RestaurantMetamodel.RestaurantMetamodelPackage#getCourse()
- * @model
+ * @model annotation="http://www.eclipse.org/emf/2002/Ecore constraints='NonNegativeNumberOfPieces'"
  * @generated
  */
 public interface Course extends NamedElement {
@@ -90,5 +93,13 @@ public interface Course extends NamedElement {
 	 * @generated
 	 */
 	void setNumberOfPieces(int value);
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @model annotation="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot body='\n\t\t\tnumberOfPieces &gt; 0'"
+	 * @generated
+	 */
+	boolean NonNegativeNumberOfPieces(DiagnosticChain diagnostics, Map<Object, Object> context);
 
 } // Course

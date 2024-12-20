@@ -13,6 +13,12 @@ import junit.textui.TestRunner;
  * <!-- begin-user-doc -->
  * A test case for the model object '<em><b>Table</b></em>'.
  * <!-- end-user-doc -->
+ * <p>
+ * The following operations are tested:
+ * <ul>
+ *   <li>{@link RestaurantMetamodel.Table#UniqueTableNumber(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map) <em>Unique Table Number</em>}</li>
+ * </ul>
+ * </p>
  * @generated
  */
 public class TableTest extends TestCase {
@@ -84,6 +90,19 @@ public class TableTest extends TestCase {
 	@Override
 	protected void tearDown() throws Exception {
 		setFixture(null);
+	}
+
+	/**
+	 * Tests the '{@link RestaurantMetamodel.Table#UniqueTableNumber(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map) <em>Unique Table Number</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see RestaurantMetamodel.Table#UniqueTableNumber(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map)
+	 * @generated
+	 */
+	public void testUniqueTableNumber__DiagnosticChain_Map() {
+		// TODO: implement this operation test method
+		// Ensure that you remove @generated or mark it @generated NOT
+		fail();
 	}
 
 } //TableTest

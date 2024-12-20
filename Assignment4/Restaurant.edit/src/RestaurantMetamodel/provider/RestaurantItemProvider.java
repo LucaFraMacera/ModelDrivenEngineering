@@ -50,6 +50,8 @@ public class RestaurantItemProvider
 			addStreetPropertyDescriptor(object);
 			addTelephonePropertyDescriptor(object);
 			addCityPropertyDescriptor(object);
+			addNumberOfEmployesPropertyDescriptor(object);
+			addTotalAreaPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -116,6 +118,50 @@ public class RestaurantItemProvider
 				 false,
 				 true,
 				 null,
+				 null,
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Number Of Employes feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addNumberOfEmployesPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_Restaurant_numberOfEmployes_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Restaurant_numberOfEmployes_feature", "_UI_Restaurant_type"),
+				 RestaurantMetamodelPackage.Literals.RESTAURANT__NUMBER_OF_EMPLOYES,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.INTEGRAL_VALUE_IMAGE,
+				 null,
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Total Area feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addTotalAreaPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_Restaurant_totalArea_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Restaurant_totalArea_feature", "_UI_Restaurant_type"),
+				 RestaurantMetamodelPackage.Literals.RESTAURANT__TOTAL_AREA,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.REAL_VALUE_IMAGE,
 				 null,
 				 null));
 	}
@@ -193,6 +239,8 @@ public class RestaurantItemProvider
 		switch (notification.getFeatureID(Restaurant.class)) {
 			case RestaurantMetamodelPackage.RESTAURANT__STREET:
 			case RestaurantMetamodelPackage.RESTAURANT__TELEPHONE:
+			case RestaurantMetamodelPackage.RESTAURANT__NUMBER_OF_EMPLOYES:
+			case RestaurantMetamodelPackage.RESTAURANT__TOTAL_AREA:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 			case RestaurantMetamodelPackage.RESTAURANT__ROOMS:

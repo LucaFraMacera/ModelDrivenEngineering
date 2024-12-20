@@ -2,6 +2,8 @@
  */
 package RestaurantMetamodel;
 
+import java.util.Map;
+import org.eclipse.emf.common.util.DiagnosticChain;
 import org.eclipse.emf.ecore.EObject;
 
 /**
@@ -16,10 +18,11 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link RestaurantMetamodel.Table#getNumber <em>Number</em>}</li>
  *   <li>{@link RestaurantMetamodel.Table#getNumberOfSeats <em>Number Of Seats</em>}</li>
  *   <li>{@link RestaurantMetamodel.Table#getMaterial <em>Material</em>}</li>
+ *   <li>{@link RestaurantMetamodel.Table#getDiningRoom <em>Dining Room</em>}</li>
  * </ul>
  *
  * @see RestaurantMetamodel.RestaurantMetamodelPackage#getTable()
- * @model
+ * @model annotation="http://www.eclipse.org/emf/2002/Ecore constraints='UniqueTableNumber'"
  * @generated
  */
 public interface Table extends EObject {
@@ -91,5 +94,37 @@ public interface Table extends EObject {
 	 * @generated
 	 */
 	void setMaterial(Material value);
+
+	/**
+	 * Returns the value of the '<em><b>Dining Room</b></em>' container reference.
+	 * It is bidirectional and its opposite is '{@link RestaurantMetamodel.DiningRoom#getTables <em>Tables</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Dining Room</em>' container reference.
+	 * @see #setDiningRoom(DiningRoom)
+	 * @see RestaurantMetamodel.RestaurantMetamodelPackage#getTable_DiningRoom()
+	 * @see RestaurantMetamodel.DiningRoom#getTables
+	 * @model opposite="tables" transient="false"
+	 * @generated
+	 */
+	DiningRoom getDiningRoom();
+
+	/**
+	 * Sets the value of the '{@link RestaurantMetamodel.Table#getDiningRoom <em>Dining Room</em>}' container reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Dining Room</em>' container reference.
+	 * @see #getDiningRoom()
+	 * @generated
+	 */
+	void setDiningRoom(DiningRoom value);
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @model annotation="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot body='\n\t\t\tdiningRoom.tables-&gt;select(t | t.number=number)-&gt;size() &lt;= 1'"
+	 * @generated
+	 */
+	boolean UniqueTableNumber(DiagnosticChain diagnostics, Map<Object, Object> context);
 
 } // Table

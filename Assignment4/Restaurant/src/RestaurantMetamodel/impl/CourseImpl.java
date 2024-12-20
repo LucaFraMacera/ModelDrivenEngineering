@@ -6,12 +6,26 @@ import RestaurantMetamodel.Course;
 import RestaurantMetamodel.CourseType;
 import RestaurantMetamodel.RestaurantMetamodelPackage;
 
+import RestaurantMetamodel.RestaurantMetamodelTables;
+import java.lang.reflect.InvocationTargetException;
+import java.util.Map;
 import org.eclipse.emf.common.notify.Notification;
 
+import org.eclipse.emf.common.util.DiagnosticChain;
+import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
+import org.eclipse.ocl.pivot.evaluation.Executor;
+import org.eclipse.ocl.pivot.ids.TypeId;
+import org.eclipse.ocl.pivot.library.oclany.OclComparableGreaterThanOperation;
+import org.eclipse.ocl.pivot.library.oclany.OclComparableLessThanEqualOperation;
+import org.eclipse.ocl.pivot.library.string.CGStringGetSeverityOperation;
+import org.eclipse.ocl.pivot.library.string.CGStringLogDiagnosticOperation;
+import org.eclipse.ocl.pivot.utilities.PivotUtil;
+import org.eclipse.ocl.pivot.utilities.ValueUtil;
+import org.eclipse.ocl.pivot.values.IntegerValue;
 
 /**
  * <!-- begin-user-doc -->
@@ -227,6 +241,49 @@ public class CourseImpl extends MinimalEObjectImpl.Container implements Course {
 	 * @generated
 	 */
 	@Override
+	public boolean NonNegativeNumberOfPieces(final DiagnosticChain diagnostics, final Map<Object, Object> context) {
+		final String constraintName = "Course::NonNegativeNumberOfPieces";
+		try {
+			/**
+			 *
+			 * inv NonNegativeNumberOfPieces:
+			 *   let severity : Integer[1] = constraintName.getSeverity()
+			 *   in
+			 *     if severity <= 0
+			 *     then true
+			 *     else
+			 *       let result : Boolean[1] = numberOfPieces > 0
+			 *       in
+			 *         constraintName.logDiagnostic(self, null, diagnostics, context, null, severity, result, 0)
+			 *     endif
+			 */
+			final /*@NonInvalid*/ Executor executor = PivotUtil.getExecutor(this);
+			final /*@NonInvalid*/ IntegerValue severity_0 = CGStringGetSeverityOperation.INSTANCE.evaluate(executor, RestaurantMetamodelPackage.Literals.COURSE___NON_NEGATIVE_NUMBER_OF_PIECES__DIAGNOSTICCHAIN_MAP);
+			final /*@NonInvalid*/ boolean le = OclComparableLessThanEqualOperation.INSTANCE.evaluate(executor, severity_0, RestaurantMetamodelTables.INT_0).booleanValue();
+			/*@NonInvalid*/ boolean IF_le;
+			if (le) {
+				IF_le = true;
+			}
+			else {
+				final /*@NonInvalid*/ int numberOfPieces = this.getNumberOfPieces();
+				final /*@NonInvalid*/ IntegerValue BOXED_numberOfPieces = ValueUtil.integerValueOf(numberOfPieces);
+				final /*@NonInvalid*/ boolean result = OclComparableGreaterThanOperation.INSTANCE.evaluate(executor, BOXED_numberOfPieces, RestaurantMetamodelTables.INT_0).booleanValue();
+				final /*@NonInvalid*/ boolean logDiagnostic = CGStringLogDiagnosticOperation.INSTANCE.evaluate(executor, TypeId.BOOLEAN, constraintName, this, (Object)null, diagnostics, context, (Object)null, severity_0, result, RestaurantMetamodelTables.INT_0).booleanValue();
+				IF_le = logDiagnostic;
+			}
+			return IF_le;
+		}
+		catch (Throwable e) {
+			return ValueUtil.validationFailedDiagnostic(constraintName, this, diagnostics, context, e);
+		}
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
 			case RestaurantMetamodelPackage.COURSE__NAME:
@@ -307,6 +364,21 @@ public class CourseImpl extends MinimalEObjectImpl.Container implements Course {
 				return numberOfPieces != NUMBER_OF_PIECES_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	@SuppressWarnings("unchecked")
+	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
+		switch (operationID) {
+			case RestaurantMetamodelPackage.COURSE___NON_NEGATIVE_NUMBER_OF_PIECES__DIAGNOSTICCHAIN_MAP:
+				return NonNegativeNumberOfPieces((DiagnosticChain)arguments.get(0), (Map<Object, Object>)arguments.get(1));
+		}
+		return super.eInvoke(operationID, arguments);
 	}
 
 	/**

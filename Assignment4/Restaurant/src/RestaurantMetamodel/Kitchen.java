@@ -27,7 +27,7 @@ public interface Kitchen extends RestaurantArea {
 	 * @return the value of the '<em>Number Of Stoves</em>' attribute.
 	 * @see #setNumberOfStoves(int)
 	 * @see RestaurantMetamodel.RestaurantMetamodelPackage#getKitchen_NumberOfStoves()
-	 * @model
+	 * @model required="true"
 	 * @generated
 	 */
 	int getNumberOfStoves();

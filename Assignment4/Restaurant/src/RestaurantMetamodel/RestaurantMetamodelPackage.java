@@ -5,6 +5,7 @@ package RestaurantMetamodel;
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EEnum;
+import org.eclipse.emf.ecore.EOperation;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
 
@@ -22,6 +23,7 @@ import org.eclipse.emf.ecore.EReference;
  * <!-- end-user-doc -->
  * @see RestaurantMetamodel.RestaurantMetamodelFactory
  * @model kind="package"
+ *        annotation="http://www.eclipse.org/emf/2002/Ecore"
  * @generated
  */
 public interface RestaurantMetamodelPackage extends EPackage {
@@ -214,13 +216,49 @@ public interface RestaurantMetamodelPackage extends EPackage {
 	int RESTAURANT__MENUS = DIAGRAM_ELEMENT_FEATURE_COUNT + 6;
 
 	/**
+	 * The feature id for the '<em><b>Number Of Employes</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RESTAURANT__NUMBER_OF_EMPLOYES = DIAGRAM_ELEMENT_FEATURE_COUNT + 7;
+
+	/**
+	 * The feature id for the '<em><b>Total Area</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RESTAURANT__TOTAL_AREA = DIAGRAM_ELEMENT_FEATURE_COUNT + 8;
+
+	/**
 	 * The number of structural features of the '<em>Restaurant</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int RESTAURANT_FEATURE_COUNT = DIAGRAM_ELEMENT_FEATURE_COUNT + 7;
+	int RESTAURANT_FEATURE_COUNT = DIAGRAM_ELEMENT_FEATURE_COUNT + 9;
+
+	/**
+	 * The operation id for the '<em>Has Accessible Toilets</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RESTAURANT___HAS_ACCESSIBLE_TOILETS = DIAGRAM_ELEMENT_OPERATION_COUNT + 0;
+
+	/**
+	 * The operation id for the '<em>Must Be Owned</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RESTAURANT___MUST_BE_OWNED__DIAGNOSTICCHAIN_MAP = DIAGRAM_ELEMENT_OPERATION_COUNT + 1;
 
 	/**
 	 * The number of operations of the '<em>Restaurant</em>' class.
@@ -229,7 +267,7 @@ public interface RestaurantMetamodelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RESTAURANT_OPERATION_COUNT = DIAGRAM_ELEMENT_OPERATION_COUNT + 0;
+	int RESTAURANT_OPERATION_COUNT = DIAGRAM_ELEMENT_OPERATION_COUNT + 2;
 
 	/**
 	 * The meta object id for the '{@link RestaurantMetamodel.impl.CityImpl <em>City</em>}' class.
@@ -690,13 +728,31 @@ public interface RestaurantMetamodelPackage extends EPackage {
 	int MENU__COURSES = NAMED_ELEMENT_FEATURE_COUNT + 0;
 
 	/**
+	 * The feature id for the '<em><b>Number Of Courses</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MENU__NUMBER_OF_COURSES = NAMED_ELEMENT_FEATURE_COUNT + 1;
+
+	/**
 	 * The number of structural features of the '<em>Menu</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int MENU_FEATURE_COUNT = NAMED_ELEMENT_FEATURE_COUNT + 1;
+	int MENU_FEATURE_COUNT = NAMED_ELEMENT_FEATURE_COUNT + 2;
+
+	/**
+	 * The operation id for the '<em>Has Course Type</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MENU___HAS_COURSE_TYPE__COURSETYPE = NAMED_ELEMENT_OPERATION_COUNT + 0;
 
 	/**
 	 * The number of operations of the '<em>Menu</em>' class.
@@ -705,7 +761,7 @@ public interface RestaurantMetamodelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MENU_OPERATION_COUNT = NAMED_ELEMENT_OPERATION_COUNT + 0;
+	int MENU_OPERATION_COUNT = NAMED_ELEMENT_OPERATION_COUNT + 1;
 
 	/**
 	 * The meta object id for the '{@link RestaurantMetamodel.impl.CourseImpl <em>Course</em>}' class.
@@ -763,13 +819,22 @@ public interface RestaurantMetamodelPackage extends EPackage {
 	int COURSE_FEATURE_COUNT = NAMED_ELEMENT_FEATURE_COUNT + 3;
 
 	/**
+	 * The operation id for the '<em>Non Negative Number Of Pieces</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COURSE___NON_NEGATIVE_NUMBER_OF_PIECES__DIAGNOSTICCHAIN_MAP = NAMED_ELEMENT_OPERATION_COUNT + 0;
+
+	/**
 	 * The number of operations of the '<em>Course</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int COURSE_OPERATION_COUNT = NAMED_ELEMENT_OPERATION_COUNT + 0;
+	int COURSE_OPERATION_COUNT = NAMED_ELEMENT_OPERATION_COUNT + 1;
 
 	/**
 	 * The meta object id for the '{@link RestaurantMetamodel.impl.RestaurantAreaImpl <em>Restaurant Area</em>}' class.
@@ -873,13 +938,22 @@ public interface RestaurantMetamodelPackage extends EPackage {
 	int DINING_ROOM__TABLES = RESTAURANT_AREA_FEATURE_COUNT + 0;
 
 	/**
+	 * The feature id for the '<em><b>Number Of Tables</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DINING_ROOM__NUMBER_OF_TABLES = RESTAURANT_AREA_FEATURE_COUNT + 1;
+
+	/**
 	 * The number of structural features of the '<em>Dining Room</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int DINING_ROOM_FEATURE_COUNT = RESTAURANT_AREA_FEATURE_COUNT + 1;
+	int DINING_ROOM_FEATURE_COUNT = RESTAURANT_AREA_FEATURE_COUNT + 2;
 
 	/**
 	 * The number of operations of the '<em>Dining Room</em>' class.
@@ -928,13 +1002,31 @@ public interface RestaurantMetamodelPackage extends EPackage {
 	int TABLE__MATERIAL = 2;
 
 	/**
+	 * The feature id for the '<em><b>Dining Room</b></em>' container reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TABLE__DINING_ROOM = 3;
+
+	/**
 	 * The number of structural features of the '<em>Table</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int TABLE_FEATURE_COUNT = 3;
+	int TABLE_FEATURE_COUNT = 4;
+
+	/**
+	 * The operation id for the '<em>Unique Table Number</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TABLE___UNIQUE_TABLE_NUMBER__DIAGNOSTICCHAIN_MAP = 0;
 
 	/**
 	 * The number of operations of the '<em>Table</em>' class.
@@ -943,7 +1035,7 @@ public interface RestaurantMetamodelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TABLE_OPERATION_COUNT = 0;
+	int TABLE_OPERATION_COUNT = 1;
 
 	/**
 	 * The meta object id for the '{@link RestaurantMetamodel.impl.KitchenImpl <em>Kitchen</em>}' class.
@@ -1220,6 +1312,48 @@ public interface RestaurantMetamodelPackage extends EPackage {
 	EReference getRestaurant_Menus();
 
 	/**
+	 * Returns the meta object for the attribute '{@link RestaurantMetamodel.Restaurant#getNumberOfEmployes <em>Number Of Employes</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Number Of Employes</em>'.
+	 * @see RestaurantMetamodel.Restaurant#getNumberOfEmployes()
+	 * @see #getRestaurant()
+	 * @generated
+	 */
+	EAttribute getRestaurant_NumberOfEmployes();
+
+	/**
+	 * Returns the meta object for the attribute '{@link RestaurantMetamodel.Restaurant#getTotalArea <em>Total Area</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Total Area</em>'.
+	 * @see RestaurantMetamodel.Restaurant#getTotalArea()
+	 * @see #getRestaurant()
+	 * @generated
+	 */
+	EAttribute getRestaurant_TotalArea();
+
+	/**
+	 * Returns the meta object for the '{@link RestaurantMetamodel.Restaurant#hasAccessibleToilets() <em>Has Accessible Toilets</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Has Accessible Toilets</em>' operation.
+	 * @see RestaurantMetamodel.Restaurant#hasAccessibleToilets()
+	 * @generated
+	 */
+	EOperation getRestaurant__HasAccessibleToilets();
+
+	/**
+	 * Returns the meta object for the '{@link RestaurantMetamodel.Restaurant#MustBeOwned(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map) <em>Must Be Owned</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Must Be Owned</em>' operation.
+	 * @see RestaurantMetamodel.Restaurant#MustBeOwned(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map)
+	 * @generated
+	 */
+	EOperation getRestaurant__MustBeOwned__DiagnosticChain_Map();
+
+	/**
 	 * Returns the meta object for class '{@link RestaurantMetamodel.NamedElement <em>Named Element</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1476,6 +1610,27 @@ public interface RestaurantMetamodelPackage extends EPackage {
 	EReference getMenu_Courses();
 
 	/**
+	 * Returns the meta object for the attribute '{@link RestaurantMetamodel.Menu#getNumberOfCourses <em>Number Of Courses</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Number Of Courses</em>'.
+	 * @see RestaurantMetamodel.Menu#getNumberOfCourses()
+	 * @see #getMenu()
+	 * @generated
+	 */
+	EAttribute getMenu_NumberOfCourses();
+
+	/**
+	 * Returns the meta object for the '{@link RestaurantMetamodel.Menu#hasCourseType(RestaurantMetamodel.CourseType) <em>Has Course Type</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Has Course Type</em>' operation.
+	 * @see RestaurantMetamodel.Menu#hasCourseType(RestaurantMetamodel.CourseType)
+	 * @generated
+	 */
+	EOperation getMenu__HasCourseType__CourseType();
+
+	/**
 	 * Returns the meta object for class '{@link RestaurantMetamodel.Course <em>Course</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1517,6 +1672,16 @@ public interface RestaurantMetamodelPackage extends EPackage {
 	 * @generated
 	 */
 	EAttribute getCourse_NumberOfPieces();
+
+	/**
+	 * Returns the meta object for the '{@link RestaurantMetamodel.Course#NonNegativeNumberOfPieces(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map) <em>Non Negative Number Of Pieces</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Non Negative Number Of Pieces</em>' operation.
+	 * @see RestaurantMetamodel.Course#NonNegativeNumberOfPieces(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map)
+	 * @generated
+	 */
+	EOperation getCourse__NonNegativeNumberOfPieces__DiagnosticChain_Map();
 
 	/**
 	 * Returns the meta object for class '{@link RestaurantMetamodel.RestaurantArea <em>Restaurant Area</em>}'.
@@ -1572,6 +1737,17 @@ public interface RestaurantMetamodelPackage extends EPackage {
 	EReference getDiningRoom_Tables();
 
 	/**
+	 * Returns the meta object for the attribute '{@link RestaurantMetamodel.DiningRoom#getNumberOfTables <em>Number Of Tables</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Number Of Tables</em>'.
+	 * @see RestaurantMetamodel.DiningRoom#getNumberOfTables()
+	 * @see #getDiningRoom()
+	 * @generated
+	 */
+	EAttribute getDiningRoom_NumberOfTables();
+
+	/**
 	 * Returns the meta object for class '{@link RestaurantMetamodel.Table <em>Table</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1613,6 +1789,27 @@ public interface RestaurantMetamodelPackage extends EPackage {
 	 * @generated
 	 */
 	EAttribute getTable_Material();
+
+	/**
+	 * Returns the meta object for the container reference '{@link RestaurantMetamodel.Table#getDiningRoom <em>Dining Room</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the container reference '<em>Dining Room</em>'.
+	 * @see RestaurantMetamodel.Table#getDiningRoom()
+	 * @see #getTable()
+	 * @generated
+	 */
+	EReference getTable_DiningRoom();
+
+	/**
+	 * Returns the meta object for the '{@link RestaurantMetamodel.Table#UniqueTableNumber(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map) <em>Unique Table Number</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Unique Table Number</em>' operation.
+	 * @see RestaurantMetamodel.Table#UniqueTableNumber(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map)
+	 * @generated
+	 */
+	EOperation getTable__UniqueTableNumber__DiagnosticChain_Map();
 
 	/**
 	 * Returns the meta object for class '{@link RestaurantMetamodel.Kitchen <em>Kitchen</em>}'.
@@ -1816,6 +2013,38 @@ public interface RestaurantMetamodelPackage extends EPackage {
 		 * @generated
 		 */
 		EReference RESTAURANT__MENUS = eINSTANCE.getRestaurant_Menus();
+
+		/**
+		 * The meta object literal for the '<em><b>Number Of Employes</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute RESTAURANT__NUMBER_OF_EMPLOYES = eINSTANCE.getRestaurant_NumberOfEmployes();
+
+		/**
+		 * The meta object literal for the '<em><b>Total Area</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute RESTAURANT__TOTAL_AREA = eINSTANCE.getRestaurant_TotalArea();
+
+		/**
+		 * The meta object literal for the '<em><b>Has Accessible Toilets</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation RESTAURANT___HAS_ACCESSIBLE_TOILETS = eINSTANCE.getRestaurant__HasAccessibleToilets();
+
+		/**
+		 * The meta object literal for the '<em><b>Must Be Owned</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation RESTAURANT___MUST_BE_OWNED__DIAGNOSTICCHAIN_MAP = eINSTANCE.getRestaurant__MustBeOwned__DiagnosticChain_Map();
 
 		/**
 		 * The meta object literal for the '{@link RestaurantMetamodel.NamedElement <em>Named Element</em>}' class.
@@ -2026,6 +2255,22 @@ public interface RestaurantMetamodelPackage extends EPackage {
 		EReference MENU__COURSES = eINSTANCE.getMenu_Courses();
 
 		/**
+		 * The meta object literal for the '<em><b>Number Of Courses</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute MENU__NUMBER_OF_COURSES = eINSTANCE.getMenu_NumberOfCourses();
+
+		/**
+		 * The meta object literal for the '<em><b>Has Course Type</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation MENU___HAS_COURSE_TYPE__COURSETYPE = eINSTANCE.getMenu__HasCourseType__CourseType();
+
+		/**
 		 * The meta object literal for the '{@link RestaurantMetamodel.impl.CourseImpl <em>Course</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -2058,6 +2303,14 @@ public interface RestaurantMetamodelPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute COURSE__NUMBER_OF_PIECES = eINSTANCE.getCourse_NumberOfPieces();
+
+		/**
+		 * The meta object literal for the '<em><b>Non Negative Number Of Pieces</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation COURSE___NON_NEGATIVE_NUMBER_OF_PIECES__DIAGNOSTICCHAIN_MAP = eINSTANCE.getCourse__NonNegativeNumberOfPieces__DiagnosticChain_Map();
 
 		/**
 		 * The meta object literal for the '{@link RestaurantMetamodel.impl.RestaurantAreaImpl <em>Restaurant Area</em>}' class.
@@ -2104,6 +2357,14 @@ public interface RestaurantMetamodelPackage extends EPackage {
 		EReference DINING_ROOM__TABLES = eINSTANCE.getDiningRoom_Tables();
 
 		/**
+		 * The meta object literal for the '<em><b>Number Of Tables</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute DINING_ROOM__NUMBER_OF_TABLES = eINSTANCE.getDiningRoom_NumberOfTables();
+
+		/**
 		 * The meta object literal for the '{@link RestaurantMetamodel.impl.TableImpl <em>Table</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -2136,6 +2397,22 @@ public interface RestaurantMetamodelPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute TABLE__MATERIAL = eINSTANCE.getTable_Material();
+
+		/**
+		 * The meta object literal for the '<em><b>Dining Room</b></em>' container reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference TABLE__DINING_ROOM = eINSTANCE.getTable_DiningRoom();
+
+		/**
+		 * The meta object literal for the '<em><b>Unique Table Number</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation TABLE___UNIQUE_TABLE_NUMBER__DIAGNOSTICCHAIN_MAP = eINSTANCE.getTable__UniqueTableNumber__DiagnosticChain_Map();
 
 		/**
 		 * The meta object literal for the '{@link RestaurantMetamodel.impl.KitchenImpl <em>Kitchen</em>}' class.

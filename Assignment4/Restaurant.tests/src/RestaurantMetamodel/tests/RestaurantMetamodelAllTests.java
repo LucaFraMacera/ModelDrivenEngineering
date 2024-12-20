@@ -31,6 +31,7 @@ public class RestaurantMetamodelAllTests extends TestSuite {
 	 */
 	public static Test suite() {
 		TestSuite suite = new RestaurantMetamodelAllTests("RestaurantMetamodel Tests");
+		suite.addTest(RestaurantMetamodelTests.suite());
 		return suite;
 	}
 

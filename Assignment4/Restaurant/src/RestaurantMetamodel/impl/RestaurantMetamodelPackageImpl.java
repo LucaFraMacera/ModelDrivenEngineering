@@ -25,12 +25,16 @@ import RestaurantMetamodel.RestaurantMetamodelPackage;
 
 import RestaurantMetamodel.Role;
 import RestaurantMetamodel.Table;
+import RestaurantMetamodel.util.RestaurantMetamodelValidator;
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EEnum;
+import org.eclipse.emf.ecore.EGenericType;
+import org.eclipse.emf.ecore.EOperation;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
 
+import org.eclipse.emf.ecore.EValidator;
 import org.eclipse.emf.ecore.impl.EPackageImpl;
 
 /**
@@ -232,6 +236,16 @@ public class RestaurantMetamodelPackageImpl extends EPackageImpl implements Rest
 		// Initialize created meta-data
 		theRestaurantMetamodelPackage.initializePackageContents();
 
+		// Register package validator
+		EValidator.Registry.INSTANCE.put
+			(theRestaurantMetamodelPackage,
+			 new EValidator.Descriptor() {
+				 @Override
+				 public EValidator getEValidator() {
+					 return RestaurantMetamodelValidator.INSTANCE;
+				 }
+			 });
+
 		// Mark meta-data to indicate it can't be changed
 		theRestaurantMetamodelPackage.freeze();
 
@@ -318,6 +332,46 @@ public class RestaurantMetamodelPackageImpl extends EPackageImpl implements Rest
 	@Override
 	public EReference getRestaurant_Menus() {
 		return (EReference)restaurantEClass.getEStructuralFeatures().get(6);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getRestaurant_NumberOfEmployes() {
+		return (EAttribute)restaurantEClass.getEStructuralFeatures().get(7);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getRestaurant_TotalArea() {
+		return (EAttribute)restaurantEClass.getEStructuralFeatures().get(8);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EOperation getRestaurant__HasAccessibleToilets() {
+		return restaurantEClass.getEOperations().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EOperation getRestaurant__MustBeOwned__DiagnosticChain_Map() {
+		return restaurantEClass.getEOperations().get(1);
 	}
 
 	/**
@@ -566,6 +620,26 @@ public class RestaurantMetamodelPackageImpl extends EPackageImpl implements Rest
 	 * @generated
 	 */
 	@Override
+	public EAttribute getMenu_NumberOfCourses() {
+		return (EAttribute)menuEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EOperation getMenu__HasCourseType__CourseType() {
+		return menuEClass.getEOperations().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public EClass getCourse() {
 		return courseEClass;
 	}
@@ -598,6 +672,16 @@ public class RestaurantMetamodelPackageImpl extends EPackageImpl implements Rest
 	@Override
 	public EAttribute getCourse_NumberOfPieces() {
 		return (EAttribute)courseEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EOperation getCourse__NonNegativeNumberOfPieces__DiagnosticChain_Map() {
+		return courseEClass.getEOperations().get(0);
 	}
 
 	/**
@@ -656,6 +740,16 @@ public class RestaurantMetamodelPackageImpl extends EPackageImpl implements Rest
 	 * @generated
 	 */
 	@Override
+	public EAttribute getDiningRoom_NumberOfTables() {
+		return (EAttribute)diningRoomEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public EClass getTable() {
 		return tableEClass;
 	}
@@ -688,6 +782,26 @@ public class RestaurantMetamodelPackageImpl extends EPackageImpl implements Rest
 	@Override
 	public EAttribute getTable_Material() {
 		return (EAttribute)tableEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getTable_DiningRoom() {
+		return (EReference)tableEClass.getEStructuralFeatures().get(3);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EOperation getTable__UniqueTableNumber__DiagnosticChain_Map() {
+		return tableEClass.getEOperations().get(0);
 	}
 
 	/**
@@ -837,6 +951,10 @@ public class RestaurantMetamodelPackageImpl extends EPackageImpl implements Rest
 		createEReference(restaurantEClass, RESTAURANT__OWNERS);
 		createEReference(restaurantEClass, RESTAURANT__EMPLOYEES);
 		createEReference(restaurantEClass, RESTAURANT__MENUS);
+		createEAttribute(restaurantEClass, RESTAURANT__NUMBER_OF_EMPLOYES);
+		createEAttribute(restaurantEClass, RESTAURANT__TOTAL_AREA);
+		createEOperation(restaurantEClass, RESTAURANT___HAS_ACCESSIBLE_TOILETS);
+		createEOperation(restaurantEClass, RESTAURANT___MUST_BE_OWNED__DIAGNOSTICCHAIN_MAP);
 
 		namedElementEClass = createEClass(NAMED_ELEMENT);
 		createEAttribute(namedElementEClass, NAMED_ELEMENT__NAME);
@@ -869,11 +987,14 @@ public class RestaurantMetamodelPackageImpl extends EPackageImpl implements Rest
 
 		menuEClass = createEClass(MENU);
 		createEReference(menuEClass, MENU__COURSES);
+		createEAttribute(menuEClass, MENU__NUMBER_OF_COURSES);
+		createEOperation(menuEClass, MENU___HAS_COURSE_TYPE__COURSETYPE);
 
 		courseEClass = createEClass(COURSE);
 		createEAttribute(courseEClass, COURSE__PRICE);
 		createEAttribute(courseEClass, COURSE__TYPE);
 		createEAttribute(courseEClass, COURSE__NUMBER_OF_PIECES);
+		createEOperation(courseEClass, COURSE___NON_NEGATIVE_NUMBER_OF_PIECES__DIAGNOSTICCHAIN_MAP);
 
 		restaurantAreaEClass = createEClass(RESTAURANT_AREA);
 		createEAttribute(restaurantAreaEClass, RESTAURANT_AREA__PERIMETER);
@@ -881,11 +1002,14 @@ public class RestaurantMetamodelPackageImpl extends EPackageImpl implements Rest
 
 		diningRoomEClass = createEClass(DINING_ROOM);
 		createEReference(diningRoomEClass, DINING_ROOM__TABLES);
+		createEAttribute(diningRoomEClass, DINING_ROOM__NUMBER_OF_TABLES);
 
 		tableEClass = createEClass(TABLE);
 		createEAttribute(tableEClass, TABLE__NUMBER);
 		createEAttribute(tableEClass, TABLE__NUMBER_OF_SEATS);
 		createEAttribute(tableEClass, TABLE__MATERIAL);
+		createEReference(tableEClass, TABLE__DINING_ROOM);
+		createEOperation(tableEClass, TABLE___UNIQUE_TABLE_NUMBER__DIAGNOSTICCHAIN_MAP);
 
 		kitchenEClass = createEClass(KITCHEN);
 		createEAttribute(kitchenEClass, KITCHEN__NUMBER_OF_STOVES);
@@ -955,6 +1079,19 @@ public class RestaurantMetamodelPackageImpl extends EPackageImpl implements Rest
 		initEReference(getRestaurant_Owners(), this.getOwner(), null, "owners", null, 0, -1, Restaurant.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getRestaurant_Employees(), this.getEmployee(), null, "employees", null, 0, -1, Restaurant.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getRestaurant_Menus(), this.getMenu(), null, "menus", null, 0, -1, Restaurant.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getRestaurant_NumberOfEmployes(), ecorePackage.getEInt(), "numberOfEmployes", null, 1, 1, Restaurant.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
+		initEAttribute(getRestaurant_TotalArea(), ecorePackage.getEFloat(), "totalArea", null, 1, 1, Restaurant.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
+
+		initEOperation(getRestaurant__HasAccessibleToilets(), ecorePackage.getEBoolean(), "hasAccessibleToilets", 1, 1, IS_UNIQUE, IS_ORDERED);
+
+		EOperation op = initEOperation(getRestaurant__MustBeOwned__DiagnosticChain_Map(), ecorePackage.getEBoolean(), "MustBeOwned", 0, 1, IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, ecorePackage.getEDiagnosticChain(), "diagnostics", 0, 1, IS_UNIQUE, IS_ORDERED);
+		EGenericType g1 = createEGenericType(ecorePackage.getEMap());
+		EGenericType g2 = createEGenericType(ecorePackage.getEJavaObject());
+		g1.getETypeArguments().add(g2);
+		g2 = createEGenericType(ecorePackage.getEJavaObject());
+		g1.getETypeArguments().add(g2);
+		addEParameter(op, g1, "context", 0, 1, IS_UNIQUE, IS_ORDERED);
 
 		initEClass(namedElementEClass, NamedElement.class, "NamedElement", IS_ABSTRACT, IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getNamedElement_Name(), ecorePackage.getEString(), "name", null, 1, 1, NamedElement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -987,26 +1124,50 @@ public class RestaurantMetamodelPackageImpl extends EPackageImpl implements Rest
 
 		initEClass(menuEClass, Menu.class, "Menu", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getMenu_Courses(), this.getCourse(), null, "courses", null, 0, -1, Menu.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getMenu_NumberOfCourses(), ecorePackage.getEInt(), "numberOfCourses", null, 1, 1, Menu.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
+
+		op = initEOperation(getMenu__HasCourseType__CourseType(), ecorePackage.getEBoolean(), "hasCourseType", 1, 1, IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, this.getCourseType(), "courseType", 1, 1, IS_UNIQUE, IS_ORDERED);
 
 		initEClass(courseEClass, Course.class, "Course", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getCourse_Price(), ecorePackage.getEFloat(), "price", null, 1, 1, Course.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getCourse_Type(), this.getCourseType(), "type", null, 1, 1, Course.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getCourse_NumberOfPieces(), ecorePackage.getEInt(), "numberOfPieces", null, 1, 1, Course.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
+		op = initEOperation(getCourse__NonNegativeNumberOfPieces__DiagnosticChain_Map(), ecorePackage.getEBoolean(), "NonNegativeNumberOfPieces", 0, 1, IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, ecorePackage.getEDiagnosticChain(), "diagnostics", 0, 1, IS_UNIQUE, IS_ORDERED);
+		g1 = createEGenericType(ecorePackage.getEMap());
+		g2 = createEGenericType(ecorePackage.getEJavaObject());
+		g1.getETypeArguments().add(g2);
+		g2 = createEGenericType(ecorePackage.getEJavaObject());
+		g1.getETypeArguments().add(g2);
+		addEParameter(op, g1, "context", 0, 1, IS_UNIQUE, IS_ORDERED);
+
 		initEClass(restaurantAreaEClass, RestaurantArea.class, "RestaurantArea", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getRestaurantArea_Perimeter(), ecorePackage.getEFloat(), "perimeter", null, 1, 1, RestaurantArea.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getRestaurantArea_Area(), ecorePackage.getEFloat(), "area", null, 1, 1, RestaurantArea.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(diningRoomEClass, DiningRoom.class, "DiningRoom", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getDiningRoom_Tables(), this.getTable(), null, "tables", null, 0, -1, DiningRoom.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getDiningRoom_Tables(), this.getTable(), this.getTable_DiningRoom(), "tables", null, 0, -1, DiningRoom.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getDiningRoom_NumberOfTables(), ecorePackage.getEInt(), "numberOfTables", null, 1, 1, DiningRoom.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
 
 		initEClass(tableEClass, Table.class, "Table", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getTable_Number(), ecorePackage.getEInt(), "number", null, 1, 1, Table.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getTable_NumberOfSeats(), ecorePackage.getEInt(), "numberOfSeats", null, 1, 1, Table.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getTable_Material(), this.getMaterial(), "material", null, 1, 1, Table.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getTable_DiningRoom(), this.getDiningRoom(), this.getDiningRoom_Tables(), "diningRoom", null, 0, 1, Table.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		op = initEOperation(getTable__UniqueTableNumber__DiagnosticChain_Map(), ecorePackage.getEBoolean(), "UniqueTableNumber", 0, 1, IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, ecorePackage.getEDiagnosticChain(), "diagnostics", 0, 1, IS_UNIQUE, IS_ORDERED);
+		g1 = createEGenericType(ecorePackage.getEMap());
+		g2 = createEGenericType(ecorePackage.getEJavaObject());
+		g1.getETypeArguments().add(g2);
+		g2 = createEGenericType(ecorePackage.getEJavaObject());
+		g1.getETypeArguments().add(g2);
+		addEParameter(op, g1, "context", 0, 1, IS_UNIQUE, IS_ORDERED);
 
 		initEClass(kitchenEClass, Kitchen.class, "Kitchen", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getKitchen_NumberOfStoves(), ecorePackage.getEInt(), "numberOfStoves", null, 0, 1, Kitchen.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getKitchen_NumberOfStoves(), ecorePackage.getEInt(), "numberOfStoves", null, 1, 1, Kitchen.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(bathroomEClass, Bathroom.class, "Bathroom", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getBathroom_NumberOfToilets(), ecorePackage.getEInt(), "numberOfToilets", null, 1, 1, Bathroom.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -1045,6 +1206,85 @@ public class RestaurantMetamodelPackageImpl extends EPackageImpl implements Rest
 
 		// Create resource
 		createResource(eNS_URI);
+
+		// Create annotations
+		// http://www.eclipse.org/emf/2002/Ecore
+		createEcoreAnnotations();
+		// http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot
+		createPivotAnnotations();
+	}
+
+	/**
+	 * Initializes the annotations for <b>http://www.eclipse.org/emf/2002/Ecore</b>.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void createEcoreAnnotations() {
+		String source = "http://www.eclipse.org/emf/2002/Ecore";
+		addAnnotation
+		  (this,
+		   source,
+		   new String[] {
+		   });
+		addAnnotation
+		  (restaurantEClass,
+		   source,
+		   new String[] {
+			   "constraints", "MustBeOwned"
+		   });
+		addAnnotation
+		  (courseEClass,
+		   source,
+		   new String[] {
+			   "constraints", "NonNegativeNumberOfPieces"
+		   });
+		addAnnotation
+		  (tableEClass,
+		   source,
+		   new String[] {
+			   "constraints", "UniqueTableNumber"
+		   });
+	}
+
+	/**
+	 * Initializes the annotations for <b>http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot</b>.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void createPivotAnnotations() {
+		String source = "http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot";
+		addAnnotation
+		  (getRestaurant__HasAccessibleToilets(),
+		   source,
+		   new String[] {
+			   "body", "rooms->selectByType(Bathroom)->select(b | b.isAccessible)->size() > 0"
+		   });
+		addAnnotation
+		  (getRestaurant__MustBeOwned__DiagnosticChain_Map(),
+		   source,
+		   new String[] {
+			   "body", "\n\t\t\towners->size() > 0"
+		   });
+		addAnnotation
+		  (getMenu__HasCourseType__CourseType(),
+		   source,
+		   new String[] {
+			   "body", "courses->select(c | c.type = courseType)->size() > 0"
+		   });
+		addAnnotation
+		  (getCourse__NonNegativeNumberOfPieces__DiagnosticChain_Map(),
+		   source,
+		   new String[] {
+			   "body", "\n\t\t\tnumberOfPieces > 0"
+		   });
+		addAnnotation
+		  (getTable__UniqueTableNumber__DiagnosticChain_Map(),
+		   source,
+		   new String[] {
+			   "body", "\n\t\t\tdiningRoom.tables->select(t | t.number=number)->size() <= 1"
+		   });
 	}
 
 } //RestaurantMetamodelPackageImpl

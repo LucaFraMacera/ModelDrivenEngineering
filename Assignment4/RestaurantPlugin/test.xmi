@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="ASCII"?>
+<RM:Diagram xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:RM="https://restaurant/RM" name="Model Test">
+  <elements xsi:type="RM:Restaurant" name="Pizzeria Okay"/>
+  <elements xsi:type="RM:Region" name="Abruzzo"/>
+  <elements xsi:type="RM:City" name="Vasto" cap="56054" region="//@elements.1"/>
+</RM:Diagram>

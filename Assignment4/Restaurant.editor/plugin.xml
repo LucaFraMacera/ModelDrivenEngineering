@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+-->
+
+<plugin>
+
+   <extension point="org.eclipse.ui.newWizards">
+      <!-- @generated RestaurantMetamodel -->
+      <category
+            id="org.eclipse.emf.ecore.Wizard.category.ID"
+            name="%_UI_Wizard_category"/>
+      <wizard
+            id="RestaurantMetamodel.presentation.RestaurantMetamodelModelWizardID"
+            name="%_UI_RestaurantMetamodelModelWizard_label"
+            class="RestaurantMetamodel.presentation.RestaurantMetamodelModelWizard"
+            category="org.eclipse.emf.ecore.Wizard.category.ID"
+            icon="icons/full/obj16/RestaurantMetamodelModelFile.gif">
+         <description>%_UI_RestaurantMetamodelModelWizard_description</description>
+         <selection class="org.eclipse.core.resources.IResource"/>
+      </wizard>
+   </extension>
+
+   <extension point="org.eclipse.ui.editors">
+      <!-- @generated RestaurantMetamodel -->
+      <editor
+            id="RestaurantMetamodel.presentation.RestaurantMetamodelEditorID"
+            name="%_UI_RestaurantMetamodelEditor_label"
+            icon="icons/full/obj16/RestaurantMetamodelModelFile.gif"
+            extensions="restaurantmetamodel"
+            class="RestaurantMetamodel.presentation.RestaurantMetamodelEditor"
+            contributorClass="RestaurantMetamodel.presentation.RestaurantMetamodelActionBarContributor">
+      </editor>
+   </extension>
+
+</plugin>

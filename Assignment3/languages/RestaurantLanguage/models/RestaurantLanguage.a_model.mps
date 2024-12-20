@@ -69,7 +69,7 @@
       <concept id="2351011243167263801" name="RestaurantLanguage.structure.Bathroom" flags="ng" index="3rjPhX">
         <property id="2351011243167263873" name="numberOfToilets" index="3rjPj5" />
       </concept>
-      <concept id="8704404528813403160" name="RestaurantLanguage.structure.EmployeRelation" flags="ng" index="1DXiRl">
+      <concept id="8704404528813403160" name="RestaurantLanguage.structure.EmployeeRelation" flags="ng" index="1DXiRl">
         <reference id="8704404528813403161" name="employe" index="1DXiRk" />
       </concept>
       <concept id="8704404528813403158" name="RestaurantLanguage.structure.OwnerRelation" flags="ng" index="1DXiRr">

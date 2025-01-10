@@ -27,7 +27,7 @@
         eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="city" lowerBound="1" eType="#//City"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="rooms" upperBound="-1"
-        eType="#//RestaurantArea" containment="true"/>
+        eType="#//Area" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="owners" upperBound="-1"
         eType="#//Owner" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="employees" lowerBound="1"
@@ -134,12 +134,12 @@
     <eLiterals name="Dessert" value="4"/>
     <eLiterals name="Appetizer" value="5"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="RestaurantArea" eSuperTypes="#//NamedElement">
+  <eClassifiers xsi:type="ecore:EClass" name="Area" eSuperTypes="#//NamedElement">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="perimeter" lowerBound="1"
         eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EFloat"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="area" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EFloat"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="DiningRoom" eSuperTypes="#//RestaurantArea">
+  <eClassifiers xsi:type="ecore:EClass" name="DiningRoom" eSuperTypes="#//Area">
     <eStructuralFeatures xsi:type="ecore:EReference" name="tables" upperBound="-1"
         eType="#//Table" containment="true" eOpposite="#//Table/diningRoom"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="numberOfTables" lowerBound="1"
@@ -172,11 +172,11 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="diningRoom" eType="#//DiningRoom"
         eOpposite="#//DiningRoom/tables"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Kitchen" eSuperTypes="#//RestaurantArea">
+  <eClassifiers xsi:type="ecore:EClass" name="Kitchen" eSuperTypes="#//Area">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="numberOfStoves" lowerBound="1"
         eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Bathroom" eSuperTypes="#//RestaurantArea">
+  <eClassifiers xsi:type="ecore:EClass" name="Bathroom" eSuperTypes="#//Area">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="numberOfToilets" lowerBound="1"
         eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="gender" lowerBound="1"

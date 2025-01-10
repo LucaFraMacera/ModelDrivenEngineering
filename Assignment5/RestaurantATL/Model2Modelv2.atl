@@ -1,0 +1,155 @@
+-- @path RestaurantMetamodel=/Restaurant/model/RestaurantMetamodel.ecore
+-- @path RestaurantMetamodelv2=/Restaurant/model/RestaurantMetamodel2.ecore
+
+module RestaurantMetamodel2RestaurantMetamodelv2;
+create OUT : RestaurantMetamodelv2 from IN : RestaurantMetamodel;
+
+rule Restaurant2Restaurantv2{
+	from s : RestaurantMetamodel!Restaurant
+	to t : RestaurantMetamodelv2!Restaurant (
+		city <- s.city,
+		employees <- s.employees,
+		menus <- s.menus,
+		name <- s.name,
+		numberOfEmployes <- s.numberOfEmployes,
+		owners <- s.owners,
+		rooms <- s.rooms,
+		street <- s.street,
+		telephone <- s.telephone,
+		totalArea <- s.totalArea
+	)
+}
+
+rule City2Cityv2{
+	from s : RestaurantMetamodel!City
+	to t : RestaurantMetamodelv2!City (
+		cap <- s.cap,
+		name <- s.name
+	)
+}
+
+rule Diagram2Diagramv2{
+	from s : RestaurantMetamodel!Diagram
+	to t : RestaurantMetamodelv2!Diagram (
+		elements <- s.elements,
+		name <- s.name
+	)
+}
+
+rule Person2Personv2{
+	from s : RestaurantMetamodel!Person
+	to t : RestaurantMetamodelv2!Person (
+		birthDate <- s.birthDate,
+		birthPlace <- s.birthPlace,
+		fiscalCode <- s.fiscalCode,
+		gender <- s.gender,
+		name <- s.name,
+		surname <- s.surname
+	)
+}
+
+rule Owner2Ownerv2{
+	from s : RestaurantMetamodel!Owner
+	to t : RestaurantMetamodelv2!Owner (
+		birthDate <- s.birthDate,
+		birthPlace <- s.birthPlace,
+		fiscalCode <- s.fiscalCode,
+		gender <- s.gender,
+		name <- s.name,
+		surname <- s.surname,
+		vat <- s.vat
+	)
+}
+
+rule Employee2Employeev2{
+	from s : RestaurantMetamodel!Employee
+	to t : RestaurantMetamodelv2!Employee (
+		birthDate <- s.birthDate,
+		birthPlace <- s.birthPlace,
+		contractExpirationDate <- s.contractExpirationDate,
+		contractSignDate <- s.contractSignDate,
+		fiscalCode <- s.fiscalCode,
+		gender <- s.gender,
+		name <- s.name,
+		salary <- s.salary,
+		surname <- s.surname
+	)
+}
+
+rule Menu2Menuv2{
+	from s : RestaurantMetamodel!Menu
+	to t : RestaurantMetamodelv2!Menu (
+		courses <- s.courses,
+		name <- s.name,
+		numberOfCourses <- s.numberOfCourses
+	)
+}
+
+rule Course2Coursev2{
+	from s : RestaurantMetamodel!Course
+	to t : RestaurantMetamodelv2!Course (
+		name <- s.name,
+		numberOfPieces <- s.numberOfPieces,
+		price <- s.price,
+		type <- s.type
+	)
+}
+
+rule RestaurantArea2Areav2{
+	from s : RestaurantMetamodel!RestaurantArea
+	to t : RestaurantMetamodelv2!Area (
+		area <- s.area,
+		name <- s.name,
+		perimeter <- s.perimeter
+	)
+}
+
+rule DiningRoom2DiningRoomv2{
+	from s : RestaurantMetamodel!DiningRoom
+	to t : RestaurantMetamodelv2!DiningRoom (
+		area <- s.area,
+		name <- s.name,
+		numberOfTables <- s.numberOfTables,
+		perimeter <- s.perimeter,
+		tables <- s.tables
+	)
+}
+
+rule Table2Tablev2{
+	from s : RestaurantMetamodel!Table
+	to t : RestaurantMetamodelv2!Table (
+		diningRoom <- s.diningRoom,
+		material <- s.material,
+		number <- s.number,
+		numberOfSeats <- s.numberOfSeats
+	)
+}
+
+rule Kitchen2Kitchenv2{
+	from s : RestaurantMetamodel!Kitchen
+	to t : RestaurantMetamodelv2!Kitchen (
+		area <- s.area,
+		name <- s.name,
+		numberOfStoves <- s.numberOfStoves,
+		perimeter <- s.perimeter
+	)
+}
+
+rule Bathroom2Bathroomv2{
+	from s : RestaurantMetamodel!Bathroom
+	to t : RestaurantMetamodelv2!Bathroom (
+		area <- s.area,
+		gender <- s.gender,
+		isAccessible <- s.isAccessible,
+		name <- s.name,
+		numberOfToilets <- s.numberOfToilets,
+		perimeter <- s.perimeter
+	)
+}
+
+rule DiagramElement2DiagramElementv2{
+	from s : RestaurantMetamodel!DiagramElement
+	to t : RestaurantMetamodelv2!DiagramElement (
+		name <- s.name
+	)
+}

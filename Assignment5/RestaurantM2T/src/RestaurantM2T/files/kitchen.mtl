@@ -1,0 +1,22 @@
+[comment encoding = UTF-8 /]
+[module kitchen('https://restaurant-alt/RM-alt')]
+[import RestaurantM2T::main::commonHTML /]
+[import RestaurantM2T::requests::queries /]
+
+[template public generateHtml(aKitchen : Kitchen)]
+[file (aKitchen.getSavePath()+aKitchen.name+'.html', false, 'UTF-8')]
+[aKitchen.generateHeaders()/]
+<body>
+	<div>
+		[aKitchen.generateBreadcrumbs()/]
+	</div>
+	<h1>Kitchen: [aKitchen.name/]</h1>
+	<ul>
+		<li>Perimeter: [aKitchen.perimeter/]</li>
+		<li>Area: [aKitchen.area/]</li>
+		<li>Number of stoves: [aKitchen.numberOfStoves/]</li>
+	</ul>
+	[aKitchen.generateLinkToParent()/]
+</body>
+[/file]
+[/template]

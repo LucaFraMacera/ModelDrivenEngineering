@@ -1,0 +1,25 @@
+[comment encoding = UTF-8 /]
+[module bathroom('http://www.eclipse.org/oomph/resources/1.0', 'https://restaurant-alt/RM-alt')]
+[import RestaurantM2T::requests::queries /]
+[import RestaurantM2T::main::commonHTML /]
+
+[template public generateHtml(aBathroom : Bathroom)]
+
+[file (aBathroom.getSavePath()+aBathroom.name+'.html', false, 'UTF-8')]
+[aBathroom.generateHeaders()/]
+<body>
+	<div>
+		[aBathroom.generateBreadcrumbs()/]
+	</div>
+	<h1>Bathroom: [aBathroom.name/]</h1>
+	<ul>
+		<li>Perimeter: [aBathroom.perimeter/]</li>
+		<li>Area: [aBathroom.area/]</li>
+		<li>Number of toilets: [aBathroom.numberOfToilets/]</li>
+		<li>Gender: [aBathroom.gender/]</li>
+		<li>Is accessible: [aBathroom.isAccessible/]</li>
+	</ul>
+	[aBathroom.generateLinkToParent()/]
+</body>
+[/file]
+[/template]

@@ -1,0 +1,34 @@
+[comment encoding = UTF-8 /]
+[module dining-room('https://restaurant-alt/RM-alt')]
+[import RestaurantM2T::main::commonHTML /]
+[import RestaurantM2T::requests::queries /]
+
+[template public generateHtml(aDiningRoom : DiningRoom)]
+
+[file (aDiningRoom.getSavePath()+aDiningRoom.name+'.html', false, 'UTF-8')]
+[aDiningRoom.generateHeaders()/]
+<body>
+	<div>
+		[aDiningRoom.generateBreadcrumbs()/]
+	</div>
+	<h1>Dining Room: [aDiningRoom.name/]</h1>
+	<ul>
+		<li>Perimeter: [aDiningRoom.perimeter/]</li>
+		<li>Area: [aDiningRoom.area/]</li>
+		<li>Tables ([aDiningRoom.numberOfTables/])
+			<ul>
+			[for (table : Table| aDiningRoom.tables)]
+				<li>Table: [table.number/]
+					<ul>
+						<li>Number of seats: [table.numberOfSeats/]</li>
+						<li>Material: [table.material/]</li>
+					</ul>
+				</li>
+			[/for]
+			</ul>
+		</li>
+	</ul>
+	[aDiningRoom.generateLinkToParent()/]
+</body>
+[/file]
+[/template]

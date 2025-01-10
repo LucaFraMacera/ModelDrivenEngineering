@@ -1,0 +1,7 @@
+[comment encoding = UTF-8 /]
+[module diagramElement('https://restaurant-alt/RM-alt')]
+[import RestaurantM2T::requests::queries /]
+
+[template public generateElement(aDiagramElement : DiagramElement)]
+	<a href='[aDiagramElement.eClass().name.toLowerCase()/]/[aDiagramElement.name/].html'>[aDiagramElement.name/]</a>
+[/template]

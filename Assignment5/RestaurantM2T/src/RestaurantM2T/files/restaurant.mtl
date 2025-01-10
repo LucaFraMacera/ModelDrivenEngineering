@@ -1,0 +1,93 @@
+[comment encoding = UTF-8 /]
+[module restaurant('https://restaurant-alt/RM-alt')]
+[import RestaurantM2T::requests::queries /]
+[import RestaurantM2T::files::owner /]
+[import RestaurantM2T::files::restaurant-employee /]
+[import RestaurantM2T::files::dining-room /]
+[import RestaurantM2T::files::kitchen /]
+[import RestaurantM2T::files::bathroom /]
+[import RestaurantM2T::files::supplier /]
+[import RestaurantM2T::files::menu /]
+[import RestaurantM2T::main::commonHTML /]
+
+[template public generateHtml(aRestaurant : Restaurant)]
+[file (aRestaurant.getSavePath()+aRestaurant.name+'.html', false, 'UTF-8')]
+[aRestaurant.generateHeaders()/]
+<body>
+	<div>
+		[aRestaurant.generateBreadcrumbs()/]
+	</div>
+	<h1>Restaurant: [aRestaurant.name/]</h1>
+	<ul>
+		<li>Street: [aRestaurant.street/]</li>
+		<li>Street: [aRestaurant.telephone/]</li>
+		<li>City: <a href='[aRestaurant.buildPath()/][aRestaurant.city.getHtmlPath()/][aRestaurant.city.name/].html'>[aRestaurant.city.name/]</a></li>
+		<li>Total Area: [aRestaurant.totalArea/]</li>
+		<li>Has Accessible Toilets: [aRestaurant.hasAccessibleToilets()/]</li>
+		<li>Owners ([aRestaurant.owners->size()/]):
+			<ul>
+			[for (owner : Owner | aRestaurant.owners)]
+				<li><a href='[aRestaurant.buildPath()/][owner.getHtmlPath()/][owner.name/] [owner.surname/].html'>[owner.name/] [owner.surname/]</a></li>
+				[owner.generateHtml()/]
+			[/for]
+			</ul>
+		<li>
+		<li>Employees ([aRestaurant.numberOfEmployes/]):
+			<ul>
+			[for (employee : RestaurantEmployee | aRestaurant.employees)]
+				<li><a href='[aRestaurant.buildPath()/][employee.getHtmlPath()/][employee.name/] [employee.surname/].html'>[employee.name/] [employee.surname/]</a></li>
+				[employee.generateHtml()/]
+			[/for]
+			</ul>
+		<li>
+		<li>Suppliers ([aRestaurant.suppliers->size()/]):
+			<ul>
+				[for (supplier : Supplier | aRestaurant.suppliers)]
+					<li><a href='[aRestaurant.buildPath()/][supplier.getHtmlPath()/][supplier.name/] [supplier.surname/].html'>[supplier.name/] [supplier.surname/]</a></li>
+					[supplier.generateHtml()/]
+				[/for]
+			</ul>
+		<li>
+	[let diningRooms : OrderedSet(DiningRoom) = aRestaurant.rooms->selectByKind(DiningRoom)]
+		<li>Dining Rooms ([diningRooms->size()/]):
+			<ul>
+			[for (room : DiningRoom | diningRooms)]
+				<li><a href='[aRestaurant.buildPath()/][room.getHtmlPath()/][room.name/].html'>[room.name/]</a></li>
+				[room.generateHtml()/]
+			[/for]
+			</ul>
+		</li>
+	[/let]
+	[let kitchens : OrderedSet(Kitchen) = aRestaurant.rooms->selectByKind(Kitchen)]
+		<li>Kitchens ([kitchens->size()/]):
+			<ul>
+			[for (room : Kitchen | kitchens)]
+				<li><a href='[aRestaurant.buildPath()/][room.getHtmlPath()/][room.name/].html'>[room.name/]</a></li>
+				[room.generateHtml()/]
+			[/for]
+			</ul>
+		</li>
+	[/let]
+	[let bathrooms : OrderedSet(Bathroom) = aRestaurant.rooms->selectByKind(Bathroom)]
+		<li> Bathrooms ([bathrooms->size()/]):
+			<ul>
+			[for (room : Bathroom | bathrooms)]
+				<li><a href='[aRestaurant.buildPath()/][room.getHtmlPath()/][room.name/].html'>[room.name/]</a></li>
+				[room.generateHtml()/]
+			[/for]
+			</ul>
+		</li>
+	[/let]
+		<li>Menus ([aRestaurant.menus->size()/]):
+			<ul>
+			[for (menu : Menu | aRestaurant.menus)]
+				<li><a href='[aRestaurant.buildPath()/][menu.getHtmlPath()/][menu.name/].html'>[menu.name/]</a></li>
+				[menu.generateHtml()/]
+			[/for]
+			</ul>
+		</li>
+	</ul>
+[aRestaurant.generateLinkToParent()/]
+</body>
+[/file]
+[/template]

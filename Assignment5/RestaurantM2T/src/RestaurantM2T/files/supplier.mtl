@@ -1,0 +1,26 @@
+[comment encoding = UTF-8 /]
+[module supplier('https://restaurant-alt/RM-alt')]
+[import RestaurantM2T::requests::queries /]
+[import RestaurantM2T::main::commonHTML /]
+
+[template public generateHtml(aSupplier : Supplier)]
+[file (aSupplier.getSavePath()+aSupplier.name+' '+aSupplier.surname+'.html', false, 'UTF-8')]
+[aSupplier.generateHeaders()/]
+<body>
+	<div>
+	[aSupplier.generateBreadcrumbs()/]
+	</div>
+	<h1>Supplier: [aSupplier.name/] [aSupplier.surname/]</h1>
+	<ul>
+		<li>Fiscal Code: [aSupplier.fiscalCode/]</li>
+		<li>Birth Date: [aSupplier.birthDate/]</li>
+		<li>Birth Place: <a href='[aSupplier.buildPath()/][aSupplier.birthPlace.getHtmlPath()/][aSupplier.birthPlace.name/].html'></a></li>
+		<li>Gender: [aSupplier.gender/]</li>
+		<li>Email: [aSupplier.email/]</li>
+		<li>Telephone: [aSupplier.telephoneNumber/]</li>
+		<li>Industry: <a href='[aSupplier.buildPath()/][aSupplier.industry.getHtmlPath()/][aSupplier.industry.name/].html'>[aSupplier.industry.name/]</a></li>
+	</ul>
+	[aSupplier.generateLinkToParent()/]
+</body>
+[/file]
+[/template]

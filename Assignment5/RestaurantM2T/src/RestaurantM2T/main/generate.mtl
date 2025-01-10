@@ -1,0 +1,30 @@
+[comment encoding = UTF-8 /]
+[module generate('https://restaurant-alt/RM-alt')]
+[import RestaurantM2T::main::commonHTML /]
+[import RestaurantM2T::files::city /]
+[import RestaurantM2T::main::diagramElement /]
+[import RestaurantM2T::files::restaurant /]
+[import RestaurantM2T::files::industry /]
+[template public generateElement(aDiagram : Diagram)]
+[comment @main/]
+[file (aDiagram.name+'.html', false, 'UTF-8')]
+[aDiagram.generateHeaders()/]
+<body>
+	<h1>[aDiagram.name/]</h1>
+	<ul>
+	[for (element : DiagramElement | aDiagram.elements)]
+		<li>[element.eClass().name/]: [element.generateElement()/]</li>
+		[if (element.oclIsKindOf(City))]
+			[element.oclAsType(City).generateHtml()/]
+		[/if]
+		[if (element.oclIsKindOf(Restaurant))]
+			[element.oclAsType(Restaurant).generateHtml()/]
+		[/if]
+		[if (element.oclIsKindOf(Industry))]
+			[element.oclAsType(Industry).generateHtml()/]
+		[/if]
+	[/for]
+	</ul>
+</body>
+[/file]
+[/template]

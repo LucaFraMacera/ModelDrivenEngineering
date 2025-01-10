@@ -1,0 +1,61 @@
+[comment encoding = UTF-8 /]
+[module queries('https://restaurant-alt/RM-alt')]
+
+
+[query public getParentName (reference : OclAny) : String = getObjectName(reference.eContainer())/]
+
+[query public getObjectName (reference : OclAny) : String = 
+	if (reference <> null and
+	   reference.eClass().eAllStructuralFeatures->exists(f | f.name = 'name')) then
+	   reference.eGet(reference.eClass().getEStructuralFeature('name')).toString()
+	else
+	   null
+	endif
+/]
+
+[query public getHtmlFilename(object : OclAny) : String = 
+	if(not object.oclAsType(Person).oclIsInvalid()) then object.getObjectName()+' '+object.oclAsType(Person).surname
+	else object.getObjectName()
+	endif
+ /]
+
+
+[query public getHtmlPath(reference : OclAny) : String = 
+	if(reference.eClass().name.toLowerCase() = 'diagram')
+		then '../'
+	else if(reference.eContainer().eClass().name.toLowerCase() = 'diagram')
+		then '../'+reference.eClass().name.toLowerCase()+'/'
+		else '../'+reference.eContainer().eClass().name.toLowerCase()+'/'+reference.eClass().name.toLowerCase()+'/'
+		endif
+	endif
+/]
+
+[query public getSavePath(reference : OclAny) : String = 
+	if(reference.eContainer().eClass().name.toLowerCase() = 'diagram')
+	then reference.eClass().name.toLowerCase()+'/'
+	else reference.eContainer().eClass().name.toLowerCase()+'/'+reference.eClass().name.toLowerCase()+'/'
+	endif
+ /]
+
+[query public buildPath(reference : OclAny) : String =  
+	if (reference.eClass().name.toLowerCase() = 'diagram' or reference.eContainer().eClass().name.toLowerCase() = 'diagram' or reference.eContainer().eClass().name.toLowerCase() = null)
+	then ''
+	else '../'+buildPath(reference.eContainer())
+	endif
+/]
+
+[query public getBreadcrumbs(reference : OclAny) : OrderedSet(OclAny) = getBreadcrumbs(reference, OrderedSet{})/]
+
+[query private getBreadcrumbs(reference : OclAny, breadcrumbs : OrderedSet(OclAny)) : OrderedSet(OclAny) = 
+	if (reference.eClass().name.toLowerCase() = 'diagram')
+	then breadcrumbs->insertAt(0, reference)
+	else getBreadcrumbs(reference.eContainer(), breadcrumbs->insertAt(0, reference))
+	endif
+/]
+
+
+
+
+
+
+

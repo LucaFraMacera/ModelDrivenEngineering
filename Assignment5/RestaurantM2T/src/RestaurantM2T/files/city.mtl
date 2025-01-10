@@ -1,0 +1,18 @@
+[comment encoding = UTF-8 /]
+[module city('https://restaurant-alt/RM-alt')]
+[import RestaurantM2T::requests::queries /]
+[import RestaurantM2T::main::commonHTML /]
+
+[template public generateHtml(aCity : City)]
+[file (aCity.getSavePath()+aCity.name+'.html', false, 'UTF-8')]
+[aCity.generateHeaders()/]
+<body>
+	<div>
+		[aCity.generateBreadcrumbs()/]
+	</div>
+	<h2>City: [aCity.name/]</h2>
+	<h3>Cap: [aCity.cap/]</h3>
+	[aCity.generateLinkToParent()/]
+</body>
+[/file]
+[/template]

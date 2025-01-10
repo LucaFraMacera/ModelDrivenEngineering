@@ -1,0 +1,49 @@
+[comment encoding = UTF-8 /]
+[module commonHTML('https://restaurant-alt/RM-alt')]
+[import RestaurantM2T::requests::queries /]
+
+[template public generateHeaders(element : Diagram)]
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="author" content="Luca Francesco Macera, Calogero Carlino">
+    <title>[element.name/]</title>
+</head>
+[/template]
+
+[template public generateHeaders(element : NamedElement)]
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="author" content="Luca Francesco Macera, Calogero Carlino">
+    <title>[element.name/]</title>
+</head>
+[/template]
+
+
+[template public generateBreadcrumbs(anOclAny : OclAny)]
+	[generateBreadcrumbs(anOclAny, 0)/]
+[/template]
+
+[template private generateBreadcrumbs(anOclAny : OclAny, depth : Integer)]
+	[let backTracking : String = Sequence{0..depth-1}->iterate(ch; acc:String ='' | acc+'../')]
+	[if (anOclAny.eClass().name.toLowerCase() = 'diagram')]
+	<a href='[backTracking/][anOclAny.getHtmlFilename()/].html'>[anOclAny.getHtmlFilename()/]</a>
+	[else]
+	[generateBreadcrumbs(anOclAny.eContainer(), depth+1)/]
+ 	| <a href='[backTracking/][anOclAny.getHtmlFilename()/].html'>[anOclAny.getHtmlFilename()/]</a>
+	[/if]
+	[/let]
+	
+[/template]
+
+[template public generateLinkToParent(object : OclAny)]
+
+<a href='../[object.getParentName()/].html'>Go to parent</a>
+
+[/template]
+

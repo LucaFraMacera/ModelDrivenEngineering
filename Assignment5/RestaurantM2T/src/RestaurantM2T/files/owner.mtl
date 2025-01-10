@@ -1,0 +1,27 @@
+[comment encoding = UTF-8 /]
+[module owner('https://restaurant-alt/RM-alt')]
+[import RestaurantM2T::main::commonHTML /]
+[import RestaurantM2T::requests::queries /]
+
+[template public generateHtml(anOwner : Owner)]
+
+[file (anOwner.getSavePath()+anOwner.name+' '+anOwner.surname+'.html', false, 'UTF-8')]
+[anOwner.generateHeaders()/]
+<body>
+	<div>
+		[anOwner.generateBreadcrumbs()/]
+	</div>
+	<h1>Owner: [anOwner.name/] [anOwner.surname/]</h1>
+	<ul>
+		<li>Fiscal Code: [anOwner.fiscalCode/]</li>
+		<li>Birth Date: [anOwner.birthDate/]</li>
+		<li>Birth Place: <a href='[anOwner.buildPath()/][anOwner.birthPlace.getHtmlPath()/][anOwner.birthPlace.name/].html'></a></li>
+		<li>Gender: [anOwner.gender/]</li>
+		<li>Email: [anOwner.email/]</li>
+		<li>Telephone: [anOwner.telephoneNumber/]</li>
+		<li>VAT: [anOwner.vat/]</li>
+	</ul>
+[anOwner.generateLinkToParent()/]
+</body>
+[/file]
+[/template]

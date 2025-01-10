@@ -1,0 +1,30 @@
+[comment encoding = UTF-8 /]
+[module restaurant-employee('https://restaurant-alt/RM-alt')]
+[import RestaurantM2T::main::commonHTML /]
+[import RestaurantM2T::requests::queries /]
+
+[template public generateHtml(aRestaurantEmployee : RestaurantEmployee)]
+
+[file (aRestaurantEmployee.getSavePath()+aRestaurantEmployee.name+' '+aRestaurantEmployee.surname+'.html', false, 'UTF-8')]
+[aRestaurantEmployee.generateHeaders()/]
+<body>
+	<div>
+	[aRestaurantEmployee.generateBreadcrumbs()/]
+	</div>
+	<h1>Restaurant Employee: [aRestaurantEmployee.name/] [aRestaurantEmployee.surname/]</h1>
+	<ul>
+		<li>Fiscal Code: [aRestaurantEmployee.fiscalCode/]</li>
+		<li>Birth Date: [aRestaurantEmployee.birthDate/]</li>
+		<li>Birth Place: <a href='[aRestaurantEmployee.buildPath()/][aRestaurantEmployee.birthPlace.getHtmlPath()/][aRestaurantEmployee.birthPlace.name/].html'></a></li>
+		<li>Gender: [aRestaurantEmployee.gender/]</li>
+		<li>Email: [aRestaurantEmployee.email/]</li>
+		<li>Telephone: [aRestaurantEmployee.telephoneNumber/]</li>
+		<li>Contract Expiration Date: [aRestaurantEmployee.contractExpirationDate/]</li>
+		<li>Contract Sign Date: [aRestaurantEmployee.contractSignDate/]</li>
+		<li>Salary: [aRestaurantEmployee.salary/]</li>
+		<li>Role: [aRestaurantEmployee.role/]</li>
+	</ul>
+	[aRestaurantEmployee.generateLinkToParent()/]
+</body>
+[/file]
+[/template]

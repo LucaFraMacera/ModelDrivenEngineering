@@ -1,0 +1,38 @@
+[comment encoding = UTF-8 /]
+[module industry('https://restaurant-alt/RM-alt')]
+[import RestaurantM2T::requests::queries /]
+[import RestaurantM2T::files::owner /]
+[import RestaurantM2T::files::employee /]
+[import RestaurantM2T::main::commonHTML /]
+
+[template public generateHtml(anIndustry : Industry)]
+[file (anIndustry.getSavePath()+anIndustry.name+'.html', false, 'UTF-8')]
+[anIndustry.generateHeaders()/]
+<body>
+	<div>
+		[anIndustry.generateBreadcrumbs()/]
+	</div>
+	<h1>Industry: [anIndustry.name/]</h1>
+	<ul>
+		<li>City: <a href='[anIndustry.city.getHtmlPath()/][anIndustry.city.name/].html'>[anIndustry.city.name/]</a></li>
+		<li>Owners ([anIndustry.owners->size()/]):
+			<ul>
+			[for (owner : Owner | anIndustry.owners)]
+				<li><a href='[anIndustry.buildPath()/][owner.getHtmlPath()/][owner.name/] [owner.surname/].html'>[owner.name/] [owner.surname/]</a></li>
+				[owner.generateHtml()/]
+			[/for]
+			</ul>
+		</li>
+		<li>Employees ([anIndustry.employees->size()/]):
+			<ul>
+			[for (employee : Employee | anIndustry.employees)]
+				<li><a href='[anIndustry.buildPath()/][employee.getHtmlPath()/][employee.name/] [employee.surname/].html'>[employee.name/] [employee.surname/]</a></li>
+				[employee.generateHtml()/]
+			[/for]
+			</ul>
+		</li>
+	</ul>'
+	[anIndustry.generateLinkToParent()/]
+</body>
+[/file]
+[/template]

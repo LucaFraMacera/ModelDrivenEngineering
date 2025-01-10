@@ -1,0 +1,33 @@
+[comment encoding = UTF-8 /]
+[module menu('https://restaurant-alt/RM-alt')]
+[import RestaurantM2T::requests::queries /]
+[import RestaurantM2T::main::commonHTML /]
+
+[template public generateHtml(aMenu : Menu)]
+
+[file (aMenu.getSavePath()+aMenu.name+'.html', false, 'UTF-8')]
+[aMenu.generateHeaders()/]
+<body>
+	<div>
+		[aMenu.generateBreadcrumbs()/]
+	</div>
+	<h1>Menu: [aMenu.name/]</h1>
+	<ul>
+		<li>Courses ([aMenu.numberOfCourses/]):
+			<ul>
+				[for (course : Course | aMenu.courses)]
+					<li>[course.name/]
+						<ul>
+							<li>Price: [course.price/]</li>
+							<li>Dish Type: [course.type/]</li>
+							<li>Number of pieces: [course.numberOfPieces/]</li>
+						</ul>
+					</li>
+				[/for]
+			</ul>
+		</li>
+	</ul>
+	[aMenu.generateLinkToParent()/]
+</body>
+[/file]
+[/template]

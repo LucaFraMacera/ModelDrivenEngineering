@@ -1,0 +1,29 @@
+[comment encoding = UTF-8 /]
+[module employee('https://restaurant-alt/RM-alt')]
+[import RestaurantM2T::main::commonHTML /]
+[import RestaurantM2T::requests::queries /]
+
+[template public generateHtml(anEmployee : Employee)]
+
+[file (anEmployee.getSavePath()+anEmployee.name+' '+anEmployee.surname+'.html', false, 'UTF-8')]
+[anEmployee.generateHeaders()/]
+<body>
+	<div>
+		[anEmployee.generateBreadcrumbs()/]
+	</div>
+	<h1>Employee: [anEmployee.name/] [anEmployee.surname/]</h1>
+	<ul>
+		<li>Fiscal Code: [anEmployee.fiscalCode/]</li>
+		<li>Birth Date: [anEmployee.birthDate/]</li>
+		<li>Birth Place: <a href='[anEmployee.buildPath()/][anEmployee.birthPlace.getHtmlPath()/][anEmployee.birthPlace.name/].html'></a></li>
+		<li>Gender: [anEmployee.gender/]</li>
+		<li>Email: [anEmployee.email/]</li>
+		<li>Telephone: [anEmployee.telephoneNumber/]</li>
+		<li>Contract Expiration Date: [anEmployee.contractExpirationDate/]</li>
+		<li>Contract Sign Date: [anEmployee.contractSignDate/]</li>
+		<li>Salary: [anEmployee.salary/]</li>
+	</ul>
+	[anEmployee.generateLinkToParent()/]
+</body>
+[/file]
+[/template]

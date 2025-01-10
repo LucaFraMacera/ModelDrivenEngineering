@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="RestaurantMetamodel" nsURI="https://restaurant/RM" nsPrefix="RM">
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="RestaurantMetamodel" nsURI="https://restaurant-alt/RM-alt" nsPrefix="RM">
   <eAnnotations source="http://www.eclipse.org/OCL/Import">
     <details key="ecore" value="http://www.eclipse.org/emf/2002/Ecore"/>
   </eAnnotations>
@@ -30,8 +30,8 @@
         eType="#//RestaurantArea" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="owners" upperBound="-1"
         eType="#//Owner" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="employees" upperBound="-1"
-        eType="#//Employee" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="employees" lowerBound="1"
+        upperBound="-1" eType="#//RestaurantEmployee" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="menus" upperBound="-1"
         eType="#//Menu" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="numberOfEmployes" lowerBound="1"
@@ -89,7 +89,6 @@
         eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDate"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="salary" lowerBound="1"
         eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EFloat"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="role" lowerBound="1" eType="#//Role"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EEnum" name="Role">
     <eLiterals name="Chef"/>
@@ -196,5 +195,8 @@
         upperBound="-1" eType="#//Owner" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="employees" lowerBound="1"
         upperBound="-1" eType="#//Employee" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="RestaurantEmployee" eSuperTypes="#//Employee">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="role" lowerBound="1" eType="#//Role"/>
   </eClassifiers>
 </ecore:EPackage>

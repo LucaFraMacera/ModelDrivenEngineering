@@ -3,30 +3,23 @@
     xmi:version="2.0"
     xmlns:xmi="http://www.omg.org/XMI"
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xmlns:RM="https://restaurant/RM"
-    name="Model2">
-  <elements
-      xsi:type="RM:Region"
-      name="Abruzzo"/>
-  <elements
-      xsi:type="RM:Region"
-      name="Kanto di Honshu"/>
+    xmlns:RM="https://restaurant-alt/RM-alt"
+    xsi:schemaLocation="https://restaurant-alt/RM-alt RestaurantMetamodel2.ecore"
+    name="Model 2 Converted">
   <elements
       xsi:type="RM:City"
       name="Vasto"
-      cap="56054"
-      region="//@elements.0"/>
+      cap="56054"/>
   <elements
       xsi:type="RM:City"
       name="Tokyo"
-      cap="JP-13"
-      region="//@elements.1"/>
+      cap="JP-13"/>
   <elements
       xsi:type="RM:Restaurant"
       name="Kuma Sushi"
       street="Piazza Gabriele Rossetti 35"
       telephone="065880787"
-      city="//@elements.2">
+      city="//@elements.1">
     <rooms xsi:type="RM:Kitchen"
         name="Guoba"
         perimeter="15.0"
@@ -41,11 +34,10 @@
         name="Tearai"
         perimeter="5.0"
         area="6.0"
-        numberOfToilets="2"
         gender="Female"
         isAccessible="true"/>
     <rooms xsi:type="RM:DiningRoom"
-        name="panda"
+        name="Panda"
         perimeter="68.0"
         area="12.0">
       <tables
@@ -71,14 +63,18 @@
         surname="Hishigami"
         fiscalCode="SHGSNK04L52012A"
         birthDate="2004-01-04T00:00:00.000+0100"
-        birthPlace="//@elements.3"
+        birthPlace="//@elements.1"
+        email="senku.hishigami@kumasushi.it"
+        telephoneNumber="3338747384"
         vat="&quot;&quot;"/>
     <employees
         name="Francois"
         surname="Francois"
         fiscalCode="FRAFRA97A07H283S"
         birthDate="1997-08-07T00:00:00.000+0200"
-        birthPlace="//@elements.3"
+        birthPlace="//@elements.1"
+        email="francois.francois@kumasushi.it"
+        telephoneNumber="3337654563"
         contractExpirationDate="2027-06-10T00:00:00.000+0200"
         contractSignDate="2024-11-05T00:00:00.000+0100"
         salary="2200.0"/>
@@ -87,7 +83,9 @@
         surname="Oki"
         fiscalCode="OKITAI04A02L234X"
         birthDate="2003-04-02T00:00:00.000+0200"
-        birthPlace="//@elements.3"
+        birthPlace="//@elements.1"
+        email="taiju.oki@kumasushi.it"
+        telephoneNumber="3467898765"
         contractSignDate="2024-04-02T00:00:00.000+0200"
         salary="1500.0"
         role="Waiter"/>
@@ -98,7 +96,7 @@
           type="Nigiri"
           numberOfPieces="3"/>
       <courses
-          name="Riso alla cantonese"
+          name="Riso all cantonese"
           price="7.0"
           type="MainDish"
           numberOfPieces="1"/>
@@ -110,7 +108,7 @@
           type="Nigiri"
           numberOfPieces="3"/>
       <courses
-          name="Riso alla cantonese"
+          name="Riso all cantonese"
           price="7.0"
           type="MainDish"
           numberOfPieces="1"/>
@@ -120,5 +118,39 @@
           type="Pizza"
           numberOfPieces="1"/>
     </menus>
+    <suppliers
+        name="Kohaku"
+        surname="Kokuyo"
+        fiscalCode="KOKKOHA23A08H283S"
+        birthDate="5723-08-08T01:00:00.000+0200"
+        gender="Female"
+        birthPlace="//@elements.1"
+        email="kohaku.kokuyo@kumasushi.it"
+        telephoneNumber="5763748894"
+        industry="//@elements.3"/>
+  </elements>
+  <elements
+      xsi:type="RM:Industry"
+      name="Kindom of Science"
+      city="//@elements.1">
+    <owners
+        name="Senku"
+        surname="Hishigami"
+        fiscalCode="SHGSNK04L52012A"
+        birthDate="2004-01-04T00:00:00.000+0100"
+        birthPlace="//@elements.1"
+        email="senku.hishigami@kumasushi.it"
+        telephoneNumber="3338747384"
+        vat="&quot;&quot;"/>
+    <employees
+        name="Chrome"
+        surname="Bud"
+        fiscalCode="BUDCHR23F04R23H"
+        birthDate="5723-02-04T00:00:00.000+0100"
+        birthPlace="//@elements.1"
+        email="chome.bud@ks.com"
+        telephoneNumber="6780986543"
+        contractSignDate="2025-01-01T00:00:00.000+0100"
+        salary="2000.0"/>
   </elements>
 </RM:Diagram>

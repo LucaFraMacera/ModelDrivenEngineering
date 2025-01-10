@@ -1,0 +1,10 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: RestaurantPlugin
+Bundle-SymbolicName: RestaurantPlugin;singleton:=true
+Bundle-Version: 1.0.0.qualifier
+Require-Bundle: Restaurant;bundle-version="0.1.0",
+ org.eclipse.emf.ecore.xmi;bundle-version="2.38.0",
+ org.eclipse.ui;bundle-version="3.207.0"
+Automatic-Module-Name: RestaurantPlugin
+Bundle-RequiredExecutionEnvironment: JavaSE-21

@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RM:Diagram
+    xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:RM="https://restaurant/RM"
+    name="Model2">
+  <elements
+      xsi:type="RM:Region"
+      name="Abruzzo"/>
+  <elements
+      xsi:type="RM:Region"
+      name="Kanto di Honshu"/>
+  <elements
+      xsi:type="RM:City"
+      name="Vasto"
+      cap="56054"
+      region="//@elements.0"/>
+  <elements
+      xsi:type="RM:City"
+      name="Tokyo"
+      cap="JP-13"
+      region="//@elements.1"/>
+  <elements
+      xsi:type="RM:Restaurant"
+      name="Kuma Sushi"
+      street="Piazza Gabriele Rossetti 35"
+      telephone="065880787"
+      city="//@elements.2">
+    <rooms xsi:type="RM:Kitchen"
+        name="Guoba"
+        perimeter="15.0"
+        area="2.0"
+        numberOfStoves="6"/>
+    <rooms xsi:type="RM:Bathroom"
+        name="Benjou"
+        perimeter="45.0"
+        area="12.0"
+        numberOfToilets="2"/>
+    <rooms xsi:type="RM:Bathroom"
+        name="Tearai"
+        perimeter="5.0"
+        area="6.0"
+        numberOfToilets="2"
+        gender="Female"
+        isAccessible="true"/>
+    <rooms xsi:type="RM:DiningRoom"
+        name="panda"
+        perimeter="68.0"
+        area="12.0">
+      <tables
+          number="1"
+          numberOfSeats="6"/>
+      <tables
+          number="2"
+          numberOfSeats="7"/>
+    </rooms>
+    <rooms xsi:type="RM:DiningRoom"
+        name="Kuma"
+        perimeter="54.0"
+        area="23.0">
+      <tables
+          number="3"
+          numberOfSeats="8"/>
+      <tables
+          number="2"
+          numberOfSeats="10"/>
+    </rooms>
+    <owners
+        name="Senku"
+        surname="Hishigami"
+        fiscalCode="SHGSNK04L52012A"
+        birthDate="2004-01-04T00:00:00.000+0100"
+        birthPlace="//@elements.3"
+        vat="&quot;&quot;"/>
+    <employees
+        name="Francois"
+        surname="Francois"
+        fiscalCode="FRAFRA97A07H283S"
+        birthDate="1997-08-07T00:00:00.000+0200"
+        birthPlace="//@elements.3"
+        contractExpirationDate="2027-06-10T00:00:00.000+0200"
+        contractSignDate="2024-11-05T00:00:00.000+0100"
+        salary="2200.0"/>
+    <employees
+        name="Taiju"
+        surname="Oki"
+        fiscalCode="OKITAI04A02L234X"
+        birthDate="2003-04-02T00:00:00.000+0200"
+        birthPlace="//@elements.3"
+        contractSignDate="2024-04-02T00:00:00.000+0200"
+        salary="1500.0"
+        role="Waiter"/>
+    <menus name="Pranzo">
+      <courses
+          name="Sake Nigiri"
+          price="3.0"
+          type="Nigiri"
+          numberOfPieces="3"/>
+      <courses
+          name="Riso alla cantonese"
+          price="7.0"
+          type="MainDish"
+          numberOfPieces="1"/>
+    </menus>
+    <menus name="Cena">
+      <courses
+          name="Sake Nigiri"
+          price="3.0"
+          type="Nigiri"
+          numberOfPieces="3"/>
+      <courses
+          name="Riso alla cantonese"
+          price="7.0"
+          type="MainDish"
+          numberOfPieces="1"/>
+      <courses
+          name="La piovra"
+          price="19.0"
+          type="Pizza"
+          numberOfPieces="1"/>
+    </menus>
+  </elements>
+</RM:Diagram>

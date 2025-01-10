@@ -5,7 +5,7 @@
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xmlns:RM="https://restaurant-alt/RM-alt"
     xsi:schemaLocation="https://restaurant-alt/RM-alt RestaurantMetamodel2.ecore"
-    name="Model 2 Converted">
+    name="">
   <elements
       xsi:type="RM:City"
       name="Vasto"

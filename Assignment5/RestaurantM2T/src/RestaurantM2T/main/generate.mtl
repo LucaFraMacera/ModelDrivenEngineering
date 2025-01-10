@@ -7,7 +7,7 @@
 [import RestaurantM2T::files::industry /]
 [template public generateElement(aDiagram : Diagram)]
 [comment @main/]
-[file (aDiagram.name+'.html', false, 'UTF-8')]
+[file (aDiagram.getDiagramName()+'.html', false, 'UTF-8')]
 [aDiagram.generateHeaders()/]
 <body>
 	<h1>[aDiagram.name/]</h1>
@@ -28,3 +28,12 @@
 </body>
 [/file]
 [/template]
+
+[query public getDiagramName(diagram : Diagram) : String =
+	if(diagram.name.oclIsInvalid() or diagram.name.size() = 0)
+	then 'index'
+	else diagram.name
+	endif
+ /]
+
+

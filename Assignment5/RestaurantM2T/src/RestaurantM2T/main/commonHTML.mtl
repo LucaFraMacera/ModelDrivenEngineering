@@ -31,8 +31,8 @@
 
 [template private generateBreadcrumbs(anOclAny : OclAny, depth : Integer)]
 	[let backTracking : String = Sequence{0..depth-1}->iterate(ch; acc:String ='' | acc+'../')]
-	[if (anOclAny.eClass().name.toLowerCase() = 'diagram')]
-	<a href='[backTracking/][anOclAny.getHtmlFilename()/].html'>[anOclAny.getHtmlFilename()/]</a>
+	[if (anOclAny.oclIsTypeOf(Diagram))]
+	<a href='[backTracking/][anOclAny.getHtmlFilename()/].html'>[getDiagramName(anOclAny.oclAsType(Diagram))/]</a>
 	[else]
 	[generateBreadcrumbs(anOclAny.eContainer(), depth+1)/]
  	| <a href='[backTracking/][anOclAny.getHtmlFilename()/].html'>[anOclAny.getHtmlFilename()/]</a>

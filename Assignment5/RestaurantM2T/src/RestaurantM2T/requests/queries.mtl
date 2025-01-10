@@ -14,16 +14,20 @@
 /]
 
 [query public getHtmlFilename(object : OclAny) : String = 
-	if(not object.oclAsType(Person).oclIsInvalid()) then object.getObjectName()+' '+object.oclAsType(Person).surname
+	if(not object.oclAsType(Person).oclIsInvalid()) 
+		then object.getObjectName()+' '+object.oclAsType(Person).surname
+	else if (object.oclIsTypeOf(Diagram))
+		then getDiagramName(object.oclAsType(Diagram))
 	else object.getObjectName()
+		endif
 	endif
  /]
 
 
 [query public getHtmlPath(reference : OclAny) : String = 
-	if(reference.eClass().name.toLowerCase() = 'diagram')
+	if(reference.oclIsTypeOf(Diagram))
 		then '../'
-	else if(reference.eContainer().eClass().name.toLowerCase() = 'diagram')
+	else if(reference.eContainer().oclIsTypeOf(Diagram))
 		then '../'+reference.eClass().name.toLowerCase()+'/'
 		else '../'+reference.eContainer().eClass().name.toLowerCase()+'/'+reference.eClass().name.toLowerCase()+'/'
 		endif
@@ -31,14 +35,14 @@
 /]
 
 [query public getSavePath(reference : OclAny) : String = 
-	if(reference.eContainer().eClass().name.toLowerCase() = 'diagram')
+	if(reference.eContainer().oclIsTypeOf(Diagram))
 	then reference.eClass().name.toLowerCase()+'/'
 	else reference.eContainer().eClass().name.toLowerCase()+'/'+reference.eClass().name.toLowerCase()+'/'
 	endif
  /]
 
 [query public buildPath(reference : OclAny) : String =  
-	if (reference.eClass().name.toLowerCase() = 'diagram' or reference.eContainer().eClass().name.toLowerCase() = 'diagram' or reference.eContainer().eClass().name.toLowerCase() = null)
+	if (reference.oclIsTypeOf(Diagram) or reference.eContainer().oclIsTypeOf(Diagram) or reference.eContainer().eClass().name.toLowerCase() = null)
 	then ''
 	else '../'+buildPath(reference.eContainer())
 	endif
@@ -47,11 +51,18 @@
 [query public getBreadcrumbs(reference : OclAny) : OrderedSet(OclAny) = getBreadcrumbs(reference, OrderedSet{})/]
 
 [query private getBreadcrumbs(reference : OclAny, breadcrumbs : OrderedSet(OclAny)) : OrderedSet(OclAny) = 
-	if (reference.eClass().name.toLowerCase() = 'diagram')
+	if (reference.oclIsTypeOf(Diagram))
 	then breadcrumbs->insertAt(0, reference)
 	else getBreadcrumbs(reference.eContainer(), breadcrumbs->insertAt(0, reference))
 	endif
 /]
+
+[query public getDiagramName(diagram : Diagram) : String =
+	if(diagram.name.oclIsInvalid() or diagram.name.size() = 0)
+	then 'index'
+	else diagram.name.toLowerCase()
+	endif
+ /]
 
 
 
